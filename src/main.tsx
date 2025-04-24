@@ -97,7 +97,7 @@ export default function Home() {
           <li className="hover:underline cursor-pointer">about</li>
           <li className="hover:underline cursor-pointer">experience</li>
           <li className="hover:underline cursor-pointer">projects</li>
-          <li className="hover:underline cursor-pointer">contact</li>
+          <li className="hover:underline cursor-pointer">contacts</li>
           <li className="flex gap-5 ml-4">
             <a
               href="https://www.linkedin.com/in/ssdhanush/"
