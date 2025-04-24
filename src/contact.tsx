@@ -1,0 +1,162 @@
+import React, { useState, FormEvent } from "react";
+import emailjs from "emailjs-com";
+
+const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID as string;
+const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID as string;
+
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setStatus("sending");
+    // Match EmailJS template parameters: subject, name, message, time
+    const templateParams = {
+      subject: formData.subject,
+      name: formData.name,
+      message: formData.message,
+      time: new Date().toLocaleString(),
+      email: formData.email,
+    };
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+      setStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      console.error("EmailJS send error:", err);
+      setStatus("error");
+    }
+  };
+
+  return (
+    <section className="relative bg-white py-20 px-4 sm:px-8 lg:px-20 -mt-32">
+      <div className="max-w-3xl mx-auto bg-white p-12 rounded-3xl shadow-xl border border-gray-100">
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-4 text-center">Contact Me</h2>
+        <p className="text-center text-gray-500 mb-8">Have a project or idea? Let’s connect!</p>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
+            />
+          </div>
+
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required
+            value={formData.subject}
+            onChange={handleChange}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
+          />
+
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows={6}
+            required
+            value={formData.message}
+            onChange={handleChange}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
+          />
+
+          <button
+            type="submit"
+            disabled={status === "sending"}
+            className="w-full py-3 bg-gradient-to-r from-sky-500 to-blue-500 text-white font-semibold rounded-full shadow-lg hover:from-sky-600 hover:to-blue-600 transition"
+          >
+            {status === "sending" ? "Sending..." : "Send Message"}
+          </button>
+
+          {status === "success" && (
+            <p className="text-green-600 mt-2 text-center">Message sent successfully!</p>
+          )}
+          {status === "error" && (
+            <p className="text-red-600 mt-2 text-center">Failed to send, please try again.</p>
+          )}
+        </form>
+
+        <div className="mt-10 border-t pt-6 flex flex-col sm:flex-row justify-between items-center">
+          <div className="space-y-1 text-center sm:text-left">
+            <p>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:youremail@example.com" className="text-sky-600 hover:underline">
+                youremail@example.com
+              </a>
+            </p>
+            <p>
+              <strong>Phone:</strong>{" "}
+              <a href="tel:+1234567890" className="text-sky-600 hover:underline">
+                +1 (234) 567-890
+              </a>
+            </p>
+          </div>
+          <div className="flex gap-6 mt-4 sm:mt-0 text-2xl text-gray-500">
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-sky-700"
+            >
+              <img
+                src="https://img.icons8.com/?size=100&id=nTY9sWZezkri&format=png&color=000000"
+                alt="Linked In"
+                className="w-8 h-8"
+              />
+            </a>
+            <a
+              href="https://github.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-sky-700"
+            >
+              <img
+                src="https://img.icons8.com/?size=100&id=LoL4bFzqmAa0&format=png&color=000000"
+                alt="GitHub"
+                className="w-8 h-8 rounded-[35px]"
+              />
+            </a>
+            <a
+              href="https://discord.com/users/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-sky-700"
+            >
+              <img
+                src="https://img.icons8.com/?size=100&id=jCIaYGMYhY9d&format=png&color=000000"
+                alt="Discord"
+                className="w-8 h-8 rounded-[35px]"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
