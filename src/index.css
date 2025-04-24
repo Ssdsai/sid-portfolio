@@ -6,7 +6,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough&display=swap');
 
+
+.glass {
+  @apply bg-white/5 backdrop-blur-sm border border-white/10;
+}
 
 
 @keyframes autoRun {

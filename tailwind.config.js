@@ -9,6 +9,7 @@ module.exports = {
         'shadows': ['"Shadows Into Light"', 'cursive'],
         'libre': ['"Libre Franklin"', 'sans-serif'],
         'abel': ['"Abel"', 'sans-serif'], 
+        'winky': ['"Winky Rough"', 'cursive'],
       },
     },
   },

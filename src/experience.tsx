@@ -1,31 +1,35 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import cagpemini from "./assets/experience/capgemini-.png";
+import latrobe from "./assets/experience/latrobe.png";
+import experience from "./assets/video/work.mp4"
 
 const experiences = [
   {
-    company: 'AlgoAce',
-    logo: '/images/algoace.png',
-    role: 'React Native Developer',
+    company: 'Capgemini',
+    logo: cagpemini,
+    role: 'Software Developer',
     location: 'Bengaluru, India',
-    duration: 'Jan 2023 – Present',
-    description: 'Developed cross-platform mobile applications using React Native, enhancing user engagement by 25%.',
+    duration: 'Jan 2023 – June 2023',
+    description: 'Developed a full-stack fitness and gym platform adopting the MERN stack (MongoDB, Express.js, React.js, Node.js) with an OTP-based authentication system via Twilio API for secure user verification. Enhanced UI/UX with React.js and Tailwind CSS, deploying lazy loading and efficient rendering for a seamless experience. Collaborated in Agile teams to ensure high-quality, scalable code. Capgemini-assessed project, presented and demonstrated given project to 3 Capgemini professionals.',
     technologies: [
-      { name: 'React Native', link: 'https://reactnative.dev/' },
-      { name: 'Redux', link: 'https://redux.js.org/' },
-      { name: 'Firebase', link: 'https://firebase.google.com/' },
+      { name: 'ReactJS', link: '' },
+      { name: 'MongoDB', link: '' },
+      { name: 'ExpressJS', link: '' },
+      { name: 'NodeJS', link: '' },
+      { name: 'Twilio API', link: '' },
     ],
   },
   {
-    company: 'Freelance',
-    logo: '/images/freelance.png',
-    role: 'Full Stack Developer',
+    company: 'La Trobe University, Melbourne, Australia',
+    logo: latrobe,
+    role: 'Research Intern',
     location: 'Remote',
-    duration: 'Jun 2021 – Dec 2022',
-    description: 'Delivered custom web solutions for clients across various industries, focusing on performance and scalability.',
+    duration: 'July 2022 – June 2023',
+    description: 'Integrated Python REST APIs on Raspberry Pi devices, providing real-time data collection and Prometheus for continuous monitoring of blockchain metrics, including transaction rates, storage usage, and network health. Built a centralized monitoring system with Grafana to visualize real-time statistics, network graphs, and key performance indicators, ensuring tracking of node performance with 95% uptime and real-time transaction throughput. Engineered a solution to visualize blockchain and consensus processes, refining node status, latency, and network performance, resulting in a 20% boost in efficiency. Executed Taiga Kanban for task management and milestones.',
     technologies: [
-      { name: 'MERN Stack', link: 'https://www.mongodb.com/mern-stack' },
-      { name: 'AWS', link: 'https://aws.amazon.com/' },
-      { name: 'Tailwind CSS', link: 'https://tailwindcss.com/' },
+      { name: 'Prometheus', link: '' },
+      { name: 'Grafana', link: '' },
     ],
   },
 ];
@@ -43,12 +47,18 @@ const Experience = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Left Side - Image */}
         <div className="hidden md:block md:col-span-1">
-          <img src="/images/space-meteor.png" alt="Meteor" className="w-full h-auto rounded-3xl shadow-2xl object-cover" />
+          <video
+            src={experience}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  className="w-full h-[550px] mt-[150px] ml-[-50px] rounded-3xl shadow-2xl object-cover" />
         </div>
 
         {/* Right Side - Timeline */}
         <div ref={timelineRef} className="relative md:col-span-2 pl-6">
-          <h2 className="text-5xl font-bold text-sky-600 mb-16">Work Experience</h2>
+          <h2 className="text-5xl font-abel text-sky-600 mb-16">Work Experience</h2>
 
           {/* Vertical Meteor Line */}
           <div className="absolute left-6 top-0 w-1 h-full">
@@ -72,7 +82,7 @@ const Experience = () => {
                 {/* Logo & Company */}
                 <div className="absolute -left-20 top-0 flex flex-col items-center w-20">
                   <div className="w-16 h-16 bg-white rounded-full p-1 border-2 border-sky-500 shadow-md">
-                    <img src={exp.logo} alt={exp.company} className="w-full h-full object-contain rounded-full" />
+                    <img src={exp.logo} alt={exp.company} className="w-full h-full object-contain rounded-full " />
                   </div>
                   <span className="mt-2 text-xs text-gray-500 text-center font-medium">{exp.company}</span>
                 </div>
@@ -80,7 +90,7 @@ const Experience = () => {
                 {/* Content */}
                 <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition duration-300 w-full">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 tracking-tight">
+                    <h3 className="text-2xl sm:text-3xl font-abel text-gray-800 tracking-tight">
                       {exp.role}
                     </h3>
                     <div className="flex items-center gap-2 text-sm mt-1 sm:mt-0">
@@ -95,7 +105,7 @@ const Experience = () => {
                     </svg>
                     <span className="font-medium text-gray-700">{exp.location}</span>
                   </p>
-                  <p className="mt-4 text-gray-700 leading-relaxed">{exp.description}</p>
+                  <p className="mt-4 text-gray-700 font-open-sans leading-relaxed">{exp.description}</p>
                   <div className="mt-5 flex flex-wrap gap-3">
                     {exp.technologies.map((tech, idx) => (
                       <a

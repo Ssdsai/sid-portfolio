@@ -18,7 +18,7 @@ function Work() {
   {/*GIF Enigma Reddit Start*/}
   const tools = [
     { name: "ReactJS", logo: reactLogo },
-    { name: "TailwindCSS", logo: tailwindLogo },
+    { name: "TailwindCSS", logo:tailwindLogo },
     // Add other tools here
   ];
   {/*GIF Enigma Reddit Start*/}
@@ -140,7 +140,7 @@ function Work() {
                   🔗 Live Now
                 </a>
                 <a
-                  href="https://github.com/your-repo-link"
+                  href="https://github.com/Ssdsai/gif-enigma"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm font-medium text-gray-500 hover:text-gray-600 transition"
@@ -232,8 +232,7 @@ function Work() {
               </div>
 
               <p className="mt-2 text-gray-600 text-sm md:text-base">
-                An animated guessing game where every GIF is a clue to a word or
-                phrase
+                Personal Healthcare Management System for 65+ Years
               </p>
 
               {/* Buttons */}
@@ -242,7 +241,7 @@ function Work() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <a
-                  href="https://www.reddit.com/r/PlayGIFEnigma/"
+                  href="https://www.figma.com/design/TMNKwJ7eSgiWvu7GbGJvqu/MY-WELL--Copy---Community-?node-id=2001-2&p=f&t=qRwhLVr5YBzFHRY8-0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 transition"
@@ -250,12 +249,12 @@ function Work() {
                   🔗 Live Now
                 </a>
                 <a
-                  href="https://github.com/your-repo-link"
+                  href=" "
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm font-medium text-gray-500 hover:text-gray-600 transition"
                 >
-                  💻 GitHub
+                  
                 </a>
               </div>
             </div>
@@ -267,8 +266,7 @@ function Work() {
               {/* Info Left */}
               <div className="md:w-1/2 hover:text-gray-500">
                 <p className="text-gray-500  mb-4">
-                  A Reddit-native guessing game using Devvit. Users guess based
-                  on animated clues.
+                  UI Designs with Figma
                 </p>
                 <ul className="text-sm text-gray-500  list-disc list-inside">
                   <li>Built with React + Devvit SDK</li>
@@ -335,8 +333,7 @@ function Work() {
               </div>
 
               <p className="mt-2 text-gray-600 text-sm md:text-base">
-                An animated guessing game where every GIF is a clue to a word or
-                phrase
+                Order Your fav cuisine
               </p>
 
               {/* Buttons */}
@@ -345,15 +342,15 @@ function Work() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <a
-                  href="https://www.reddit.com/r/PlayGIFEnigma/"
+                  href=" "
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 transition"
                 >
-                  🔗 Live Now
+                 
                 </a>
                 <a
-                  href="https://github.com/your-repo-link"
+                  href="https://github.com/Ssdsai/Cuisine-Connect"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm font-medium text-gray-500 hover:text-gray-600 transition"
@@ -370,13 +367,12 @@ function Work() {
               {/* Info Left */}
               <div className="md:w-1/2 hover:text-gray-500">
                 <p className="text-gray-500  mb-4">
-                  A Reddit-native guessing game using Devvit. Users guess based
-                  on animated clues.
+                  Food Ordering Booking Website
                 </p>
                 <ul className="text-sm text-gray-500  list-disc list-inside">
-                  <li>Built with React + Devvit SDK</li>
-                  <li>Hosted on Reddit as a native app</li>
-                  <li>Game state managed using subreddit posts</li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
                 </ul>
               </div>
 
