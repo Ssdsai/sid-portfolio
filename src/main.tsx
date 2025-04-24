@@ -94,10 +94,10 @@ export default function Home() {
         <ul
           className={`hidden lg:flex gap-12 text-[25px] text-black font-playfair font-semibold`}
         >
-          <li className="hover:underline cursor-pointer">about</li>
-          <li className="hover:underline cursor-pointer">experience</li>
-          <li className="hover:underline cursor-pointer">projects</li>
-          <li className="hover:underline cursor-pointer">contact</li>
+          <li className="hover:underline cursor-pointer" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>about</li>
+<li className="hover:underline cursor-pointer" onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}>experience</li>
+<li className="hover:underline cursor-pointer" onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}>projects</li>
+<li className="hover:underline cursor-pointer" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>contact</li>
           <li className="flex gap-5 ml-4">
             <a
               href="https://www.linkedin.com/in/ssdhanush/"

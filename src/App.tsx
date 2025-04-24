@@ -37,7 +37,7 @@ function App() {
             zIndex: 9,
           }}
         >
-          <h1 className="mt-[-100px] text-black font-abel">01. About</h1>
+          <h1 className="mt-[-100px] text-black font-abel" id="about">01. About</h1>
         </motion.div>
         {/* Experience section appears AFTER zoom */}
         <div className="relative z-10 mt-[-10vh]">
@@ -56,7 +56,7 @@ function App() {
             zIndex: 9,
           }}
         >
-          <h1 className="mt-[-100px] text-black font-abel">02. Work</h1>
+          <h1 className="mt-[-100px] text-black font-abel" id="work">02. Work</h1>
         </motion.div>
         {/* Experience section appears AFTER zoom */}
         <div className="relative z-10 mt-[-20vh]">
@@ -73,12 +73,12 @@ function App() {
             zIndex: 9,
           }}
         >
-          <h1 className="mt-[-100px] text-black font-abel">03. Experience</h1>
+          <h1 className="mt-[-100px] text-black font-abel" id="experience">03. Experience</h1>
         </motion.div>
         {/* Experience section appears AFTER zoom */}
         <div className="relative z-10 mt-[-10vh]">
           <Experience />
-          <Contact />
+          <div id="contact"><Contact /></div>
           <Chatbot />
         </div>
 
