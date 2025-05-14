@@ -4,8 +4,30 @@ import gifenigma from "./assets/projects/gif enigma/gifenigma.jpeg"; ///project 
 import mywell from "./assets/MY WELL.png"; //// project 2
 import cuisineconnect from "./assets/projects/cuisine-connect/logo.png"; //////  project 3
 import work from "./assets/video/work.mp4";
+
 import reactLogo from "./assets/tools/react.png";
 import tailwindLogo from "./assets/tools/tailwind.png";
+
+import MyWell_UserAuth from "./assets/projects/my well/User Authentication 1.jpg";
+import MyWell_Login   from "./assets/projects/my well/Login Page 2.jpg";
+import MyWell_Create   from "./assets/projects/my well/Create Page 3.jpg";
+import MyWell_Dashboard   from "./assets/projects/my well/Dashboard 4.jpg";
+import MyWell_Alert   from "./assets/projects/my well/Alert 5.jpg";
+import MyWell_UserUI   from "./assets/projects/my well/User UI 6.jpg";
+import MyWell_Profile   from "./assets/projects/my well/User Profile 7.jpg"
+import MyWell_VideoDash   from "./assets/projects/my well/Video Dashboard 8.jpg";
+import MyWell_MessageUI   from "./assets/projects/my well/Message UI 9.jpg";
+import MyWell_VideoCall   from "./assets/projects/my well/Video Call 10.jpg";
+import MyWell_Recommendation   from "./assets/projects/my well/Recommendation by AI 11.jpg";
+
+import CC from "./assets/projects/cuisine-connect/Cuisine Connect.png";
+import CC1 from "./assets/projects/cuisine-connect/Cuisine Connect1.png";
+import CC2 from "./assets/projects/cuisine-connect/Cuisine Connect2.png";
+import CC3 from "./assets/projects/cuisine-connect/Cuisine Connect3.png";
+import CC4 from "./assets/projects/cuisine-connect/Cuisine Connect4.png";
+import CC5 from "./assets/projects/cuisine-connect/Cuisine Connect5.png";
+import CC6 from "./assets/projects/cuisine-connect/Cuisine Connect6.png";
+/*{ darken }: { darken: boolean }*/ 
 
 function Work() {
   const [open, setOpen] = useState<number | null>(null);
@@ -17,38 +39,23 @@ function Work() {
 
   {/*GIF Enigma Reddit Start*/}
   const tools = [
-    { name: "ReactJS", logo: reactLogo },
-    { name: "TailwindCSS", logo:tailwindLogo },
+    { name: "ReactJS", src:"https://img.icons8.com/?size=100&id=25Sjy8fKExYA&format=png&color=000000" },
+    { name: "TailwindCSS", src:"https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000" },
+    { name: "TypeScript", src:"https://img.icons8.com/?size=100&id=wpZmKzk11AzJ&format=png&color=000000" },
     // Add other tools here
   ];
   {/*GIF Enigma Reddit Start*/}
 
   {/*My Well Start*/}
   const mywell_images = [
-    require("./assets/projects/my well/User Authentication 1.jpg"),
-    require("./assets/projects/my well/Login Page 2.jpg"),
-    require("./assets/projects/my well/Create Page 3.jpg"),
-    require("./assets/projects/my well/Dashboard 4.jpg"),
-    require("./assets/projects/my well/Alert 5.jpg"),
-    require("./assets/projects/my well/User UI 6.jpg"),
-    require("./assets/projects/my well/User Profile 7.jpg"),
-    require("./assets/projects/my well/Video Dashboard 8.jpg"),
-    require("./assets/projects/my well/Message UI 9.jpg"),
-    require("./assets/projects/my well/Video Call 10.jpg"),
-    require("./assets/projects/my well/Recommendation by AI 11.jpg"),
+    MyWell_UserAuth, MyWell_Login, MyWell_Create, MyWell_Dashboard, MyWell_Alert, MyWell_UserUI, MyWell_Profile, MyWell_VideoDash, MyWell_MessageUI, MyWell_VideoCall, MyWell_Recommendation
   ];
   {/*My Well End*/}
 
   {/*Cuisine Connect Start*/}
   const [currentCuisine, setCurrentCuisine] = useState(0);
   const cuisineImages = [
-    require("./assets/projects/cuisine-connect/Cuisine Connect.png"),
-    require("./assets/projects/cuisine-connect/Cuisine Connect1.png"),
-    require("./assets/projects/cuisine-connect/Cuisine Connect2.png"),
-    require("./assets/projects/cuisine-connect/Cuisine Connect3.png"),
-    require("./assets/projects/cuisine-connect/Cuisine Connect4.png"),
-    require("./assets/projects/cuisine-connect/Cuisine Connect5.png"),
-    require("./assets/projects/cuisine-connect/Cuisine Connect6.png"),
+    CC, CC1, CC2, CC3, CC4, CC5, CC6
   ];
   useEffect(() => {
     const interval = setInterval(() => {
@@ -60,7 +67,7 @@ function Work() {
   {/*Cuisine Connect End*/}
 
   return (
-    <div className=" flex flex-col">
+    <div className={` flex flex-col `}>{/*bg-[#E8E5DA] transition-colors duration-700 bg-transparent */}
       {/* Road + Bus Transition */}
       {/* <div className="relative w-full h-32 z-50 flex items-center">
         <div className="h-[4px] bg-black w-full mx-12 rounded mt-[-5px]" />
@@ -190,7 +197,7 @@ function Work() {
     {tools.map((tool, index) => (
       <div key={index} className="text-center flex flex-col items-center justify-center">
         <img
-          src={tool.logo}
+          src={tool.src}
           alt={tool.name}
           className="w-16 h-16 mx-auto mb-2 object-contain"
         />
@@ -276,29 +283,32 @@ function Work() {
               </div>
 
               {/* Media Right */}
-              <div className="md:w-1/2 mt-4 mr-[50px] max-sm:mr-[0px] md:mt-0">
-                <div className="relative w-full h-[55vh] text-center overflow-hidden object-contain p-10 max-sm:h-[80vh]">
-                  <div className="absolute w-[200px] h-[450px] top-[10%] left-1/2 -translate-x-1/2 [transform-style:preserve-3d] [transform:perspective(1000px)] animate-autoRun z-20">
-                    {mywell_images.map((img, index) => (
-                      <div
-                        key={index}
-                        className="absolute inset-0 shadow-black-lg"
-                        style={{
-                          transform: `rotateY(${
-                            index * (360 / mywell_images.length)
-                          }deg) translateZ(350px)`,
-                        }}
-                      >
-                        <img
-                          src={`${img}`}
-                          alt={`dragon_${index + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <div className="w-full md:w-1/2 mt-4 md:mt-0 px-4 sm:px-6 lg:px-8">
+  <div className="relative w-full min-h-[500px] sm:min-h-[550px] lg:min-h-[600px] text-center overflow-visible object-contain p-4 sm:p-6 md:p-8">
+    <div className="relative mx-auto w-[200px] h-[500px] sm:w-[220px] sm:h-[520px] lg:w-[240px] lg:h-[540px] [transform-style:preserve-3d] [transform:perspective(1000px)] animate-autoRun z-20">
+      {mywell_images.map((img, index) => (
+        <div
+          key={index}
+          className="absolute inset-0 shadow-black-lg"
+          style={{
+            transform: `rotateY(${
+              index * (360 / mywell_images.length)
+            }deg) translateZ(400px)`,
+          }}
+        >
+          <img
+            src={img}
+            alt={`dragon_${index + 1}`}
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
+              
             </div>
           )}
         </div>

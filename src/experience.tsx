@@ -3,6 +3,9 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import cagpemini from "./assets/experience/capgemini-.png";
 import latrobe from "./assets/experience/latrobe.png";
 import experience from "./assets/video/work.mp4"
+import { useInView } from "react-intersection-observer";
+
+
 
 const experiences = [
   {
@@ -14,6 +17,7 @@ const experiences = [
     description: 'Developed a full-stack fitness and gym platform adopting the MERN stack (MongoDB, Express.js, React.js, Node.js) with an OTP-based authentication system via Twilio API for secure user verification. Enhanced UI/UX with React.js and Tailwind CSS, deploying lazy loading and efficient rendering for a seamless experience. Collaborated in Agile teams to ensure high-quality, scalable code. Capgemini-assessed project, presented and demonstrated given project to 3 Capgemini professionals.',
     technologies: [
       { name: 'ReactJS', link: '' },
+      { name: 'CSS3', link: '' },
       { name: 'MongoDB', link: '' },
       { name: 'ExpressJS', link: '' },
       { name: 'NodeJS', link: '' },
@@ -34,16 +38,88 @@ const experiences = [
   },
 ];
 
-const Experience = () => {
-  const timelineRef = useRef(null);
+type ExperienceProps = {
+  refProp: React.Ref<HTMLElement | null>;
+};
+
+
+
+const Experience = ({ refProp }: ExperienceProps) => {
+  const { ref: inViewRef, inView: isInView } = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
+  });
+  
+  
+
+  const timelineRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: timelineRef,
     offset: ['start end', 'end start'],
   });
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+  const lineHeight = useTransform(scrollYProgress, [0, 0.9], ['0%', '100%']);
 
   return (
-    <section className="relative w-full bg-black text-gray-900 py-20 px-4 sm:px-8 lg:px-20 overflow-hidden">
+    // <div  ref={inViewRef} className={`transition-colors duration-1000 bg-transparent text-inherit`}>
+    <section ref={refProp} data-scroll-section className="relative w-full  text-gray-900 py-20 px-4 sm:px-8 lg:px-20 ">
+    //{/* <section
+    //   ref={refProp}
+    //   className={`relative w-full py-20 px-4 sm:px-8 lg:px-20 ${
+    //     isInView ? "bg-black text-white" : "bg-white text-black"
+    //   } transition-colors duration-1000`}
+    // >*/}
+
+<div className="mb-36 px-4 md:px-12 lg:px-20 w-full">
+  {/* Container for both education blocks */}
+  <div className="flex flex-col lg:flex-row gap-8 w-full">
+    
+    {/* Block 1 */}
+    <div className="flex flex-col sm:flex-row items-start bg-white rounded-xl shadow-md p-6 w-full">
+      {/* Image Left */}
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/9/96/Illinois_Institute_of_Technology_%28seal%29.svg"
+        alt="College 1"
+        className="w-full sm:w-40 h-40 object-cover rounded-lg mb-4 sm:mb-0 sm:mr-6"
+      />
+      
+      {/* Info Right */}
+      <div className="flex-1">
+        <h1 className="text-xl font-semibold text-gray-800">Illinois Institute of Technology</h1>
+        <p className="text-gray-600">Master's in Computer Science</p>
+        <p className="text-gray-500 text-sm mt-1">GPA: - </p>
+        <p className="text-gray-500 text-sm">2023 - 2025</p>
+        <p className="text-gray-600 mt-2 text-sm">
+          Relevant Courses: Enterprise Web Applications, Machine Learning, Data Privacy & Security, Software Engineering
+        </p>
+      </div>
+    </div>
+
+    {/* Block 2 */}
+    <div className="flex flex-col sm:flex-row items-start bg-white rounded-xl shadow-md p-6 w-full">
+      {/* Image Left */}
+      <img
+        src="https://askusedu.com/wp-content/uploads/2022/12/600x600-6.jpg"
+        alt="College 2"
+        className="w-full sm:w-40 h-40 object-cover rounded-lg mb-4 sm:mb-0 sm:mr-6"
+      />
+
+      {/* Info Right */}
+      <div className="flex-1">
+        <h1 className="text-xl font-semibold text-gray-800">Presidency University, Bengaluru</h1>
+        <p className="text-gray-600">Bachelors of Technology in Computer Science</p>
+        <p className="text-gray-500 text-sm mt-1">GPA: 8.49 / 10</p>
+        <p className="text-gray-500 text-sm">2019 - 2023</p>
+        <p className="text-gray-600 mt-2 text-sm">
+          Key Courses: Data Structures and Algorithms, DBMS, Operating Systems, Mobile Application Development
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Left Side - Image */}
         <div className="hidden md:block md:col-span-1">
@@ -58,7 +134,7 @@ const Experience = () => {
 
         {/* Right Side - Timeline */}
         <div ref={timelineRef} className="relative md:col-span-2 pl-6">
-          <h2 className="text-5xl font-abel text-sky-600 mb-16">Work Experience</h2>
+          <h2 className="text-5xl font-playfair text-sky-600 mb-16">Work Experience</h2>
 
           {/* Vertical Meteor Line */}
           <div className="absolute left-6 top-0 w-1 h-full">
@@ -105,7 +181,7 @@ const Experience = () => {
                     </svg>
                     <span className="font-medium text-gray-700">{exp.location}</span>
                   </p>
-                  <p className="mt-4 text-gray-700 font-open-sans leading-relaxed">{exp.description}</p>
+                  <p className="mt-4 text-gray-700 font-sans-serif text-[17px] leading-relaxed">{exp.description}</p>
                   <div className="mt-5 flex flex-wrap gap-3">
                     {exp.technologies.map((tech, idx) => (
                       <a
@@ -126,6 +202,7 @@ const Experience = () => {
         </div>
       </div>
     </section>
+    // </div>
   );
 };
 

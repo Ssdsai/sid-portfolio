@@ -174,13 +174,15 @@
 //       <h5>Version 1.1</h5>
 //     </footer>
 //     </section>
-    
+
 //   );
 // }
 
 import React, { useState, FormEvent } from "react";
 import emailjs from "emailjs-com";
-
+import emailicon from "./assets/video/email-file.gif";
+import phone from "./assets/video/phone.gif";
+import resume from "./assets/video/resume.gif";
 
 const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID as string;
 const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID as string;
@@ -192,10 +194,14 @@ export default function Contact() {
     subject: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -223,24 +229,102 @@ export default function Contact() {
   return (
     <section className="relative bg-white py-20 px-4 sm:px-8 lg:px-20 -mt-32">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-        
         {/* LEFT SIDE */}
         <div className="flex flex-col justify-start items-start">
-          <h2 className="text-4xl font-shadows text-[80px] text-gray-900 max-sm:text-[60px]">Get in Touch !</h2>
+          <h2 className="text-4xl font-shadows text-[80px] text-gray-900 max-sm:text-[60px]">
+            Get in Touch !
+          </h2>
 
           <div className="mt-20 space-y-4 text-gray-700 font-winky text-[30px]">
             <p>
-              <strong>Email:</strong><br />
-              <a href="mailto:steve161201@gmail.com" className="text-sky-600 hover:underline">
-                stevesid161201@gmail.com
+            <span className="inline-flex items-center gap-1">
+            <a href="mailto:stevesid161201@gmail.com"><img
+                    src={emailicon}
+                    alt="Email Gif"
+                    className="
+                            rounded-xl
+                            w-8 h-8                /* base (mobile-first) */
+                            sm:w-10 sm:h-10        /* small screens */
+                            md:w-12 md:h-12        /* medium screens */
+                            lg:w-14 lg:h-14  lg:mt-[-25px]      /* large screens */
+                            xl:w-16 xl:h-16        /* extra-large screens */
+                            2xl:w-20 2xl:h-20      /* 2xl screens */
+                          "
+                  /></a>
+              <strong>Email:</strong>
+              <br />
+              <a
+                href="mailto:stevesid161201@gmail.com"
+                className="text-sky-600 hover:underline inline-flex gap-1"
+              >
+                
+                 
+                  stevesid161201@gmail.com
+                
               </a>
+              </span>
             </p>
+
             <p>
-              <strong>Phone:</strong><br />
-              <a href="tel:+7739706599" className="text-sky-600 hover:underline">
+            <span className="inline-flex items-center gap-1">
+            <a href="tel:+7739706599"><img
+                    src={phone}
+                    alt="Phone Gif"
+                    className="
+                            rounded-xl
+                            w-8 h-8                /* base (mobile-first) */
+                            sm:w-10 sm:h-10        /* small screens */
+                            md:w-12 md:h-12        /* medium screens */
+                            lg:w-14 lg:h-14  lg:mt-[-25px]      /* large screens */
+                            xl:w-16 xl:h-16        /* extra-large screens */
+                            2xl:w-20 2xl:h-20      /* 2xl screens */
+                          "
+                    
+                  /></a>
+              <strong>Phone:</strong>
+              <br />
+              <a
+                href="tel:+7739706599"
+                className="text-sky-600 hover:underline inline-flex gap-1"
+              >
+                
+                 
                 +1 (773) 970-6599
+                
               </a>
+              </span>
             </p>
+
+            <p>
+            <span className="inline-flex items-center gap-1">
+            <a
+                href="https://drive.google.com/file/d/1eBBFiSKcePMEkhv6qiqRXKvMDnDUBw8L/view?usp=sharing"
+                className="text-sky-600 hover:underline inline-flex gap-1"
+                target="_blank"
+              >
+            <img
+                    src={resume}
+                    alt="Resume Gif"
+                    className="
+                            rounded-xl
+                            w-8 h-8                /* base (mobile-first) */
+                            sm:w-10 sm:h-10        /* small screens */
+                            md:w-12 md:h-12        /* medium screens */
+                            lg:w-14 lg:h-14  lg:mt-[-15px]      /* large screens */
+                            xl:w-16 xl:h-16        /* extra-large screens */
+                            2xl:w-20 2xl:h-20      /* 2xl screens */
+                          "
+                  />
+              
+              <br />
+              
+                <strong>Resume</strong>
+              </a>
+              </span>
+            </p>
+
+           
+
           </div>
         </div>
 
@@ -299,28 +383,42 @@ export default function Contact() {
             <p className="text-green-600 mt-2">Message sent successfully!</p>
           )}
           {status === "error" && (
-            <p className="text-red-600 mt-2">Failed to send, please try again.</p>
+            <p className="text-red-600 mt-2">
+              Failed to send, please try again.
+            </p>
           )}
         </form>
       </div>
 
       {/* SOCIAL ICONS */}
       <div className="mt-16 flex justify-center gap-6 text-gray-500">
-        <a href="https://www.linkedin.com/in/ssdhanush" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/ssdhanush"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src="https://img.icons8.com/?size=100&id=nTY9sWZezkri&format=png&color=000000"
             alt="Linked In"
             className="w-8 h-8 hover:scale-110 transition-transform"
           />
         </a>
-        <a href="https://github.com/Ssdsai" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/Ssdsai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src="https://img.icons8.com/?size=100&id=LoL4bFzqmAa0&format=png&color=000000"
             alt="GitHub"
             className="w-8 h-8 hover:scale-110 transition-transform"
           />
         </a>
-        <a href="https://discord.com/channels/sid161201" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://discord.com/channels/sid161201"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src="https://img.icons8.com/?size=100&id=jCIaYGMYhY9d&format=png&color=000000"
             alt="Discord"
@@ -330,7 +428,7 @@ export default function Contact() {
       </div>
 
       {/* FOOTER (unchanged) */}
-      <footer className="mt-12 mb-[-40px] border-t pt-6 text-center text-sm text-gray-400">
+      <footer className="mt-6 mb[40px] border-t pt-6 text-center text-sm text-gray-400">
         <p>
           &copy; 2025.{" "}
           <a

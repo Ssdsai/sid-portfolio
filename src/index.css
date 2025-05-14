@@ -7,10 +7,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Winky+Rough&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+@font-face {
+  font-family: 'Autumn';
+  src: url('/src//assets/fonts/Autumn.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 .glass {
   @apply bg-white/5 backdrop-blur-sm border border-white/10;
+}
+
+/* html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+} */
+
+/* [data-scroll-container] {
+  will-change: transform;
+} */
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+[data-scroll-container] {
+  min-height: 100vh;
 }
 
 

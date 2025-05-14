@@ -58,6 +58,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import contact from "./assets/about-contact.png";
+
+import hotjar from "./assets/about/hotjar.png";
+import spline from "./assets/about/spline.png";
+import invision from "./assets/about/invision.png";
 
 export default function AboutMePage() {
   const techStacks = {
@@ -76,6 +81,7 @@ export default function AboutMePage() {
       { name: 'Tailwind CSS', src: 'https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000' },
       { name: 'HTML5', src: 'https://img.icons8.com/?size=100&id=20909&format=png&color=000000' },
       { name: 'CSS3', src: 'https://img.icons8.com/?size=100&id=YjeKwnSQIBUq&format=png&color=000000' },
+      { name: 'Bootstrap', src: 'https://img.icons8.com/?size=100&id=g9mmSxx3SwAI&format=png&color=000000' },
     ],
     "Backend": [
       { name: 'Java', src: 'https://img.icons8.com/?size=100&id=13679&format=png&color=000000' },
@@ -86,12 +92,26 @@ export default function AboutMePage() {
       { name: 'PostgreSQL', src: 'https://img.icons8.com/?size=100&id=xF33DQdGyLDz&format=png&color=000000' },
       { name: 'MySQL', src: 'https://img.icons8.com/?size=100&id=rgPSE6nAB766&format=png&color=000000' },
       { name: 'Docker', src: 'https://img.icons8.com/?size=100&id=22813&format=png&color=000000' },
-    ]
+    ],
+    "UI/UX" : [
+      {name: 'Figma', src: 'https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000'},
+      {name: 'Hot Jar', src: hotjar},
+      {name: 'Spline', src: spline},
+      {name: 'Adobe XD', src: 'https://img.icons8.com/?size=100&id=4VVL78edhbW9&format=png&color=000000'},
+      {name: 'Sketch', src: 'https://img.icons8.com/?size=100&id=37iEIiYKRoDs&format=png&color=000000'},
+      {name: 'Photoshop', src: 'https://img.icons8.com/?size=100&id=dwfuFrQfNSOo&format=png&color=000000'},
+      {name: 'InVision', src: invision},
+    ],
+    // "Other Tools" : [
+    //   {name: 'Figma', src: 'https://img.icons8.com/?size=100&id=dwfuFrQfNSOo&format=png&color=000000'},
+    //   {name: 'Hot Jar', src: hotjar},
+    //   {name: 'Spline', src: spline},
+    // ],
   };
 
   return (
-    <div className="min-h-screen w-full bg-white text-black px-6 sm:px-10 md:px-16 py-24 flex items-center justify-center">
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12">
+    <div className="min-h-screen w-full bg-white text-black px-6 sm:px-10 md:px-16 mt-[-400px] lg:mt-[-400px] flex items-center justify-center ">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center ">
 
         {/* Left: Tech Stack Section */}
         <motion.div
@@ -102,7 +122,7 @@ export default function AboutMePage() {
         >
           {Object.entries(techStacks).map(([section, icons], idx) => (
             <div key={idx}>
-              <h2 className="text-2xl font-bold text-blue-400 mb-4">{section}</h2>
+              <h2 className="text-2xl font-winky text-[#2CCED4] mb-4">{section}</h2>
               <div className="flex flex-wrap gap-4">
                 {icons.map((tech, i) => (
                   <motion.div
@@ -114,7 +134,7 @@ export default function AboutMePage() {
                   <div className="w-16 h-16 bg-white/10 p-2 rounded-full flex items-center justify-center shadow-md">
                     <img src={tech.src} alt={tech.name} className="w-10 h-10 object-contain" />
                   </div>
-                  <span className="text-xs text-center text-black/80">{tech.name}</span>
+                  <span className="text-xs text-center font-winky text-black/80">{tech.name}</span>
                 </motion.div>
                 
                 ))}
@@ -134,24 +154,35 @@ export default function AboutMePage() {
             <h1 className="text-4xl sm:text-5xl font-playfair mb-2 leading-tight">Sai Dhanush Soma</h1>
             <h3 className="text-lg text-blue-400">Software Developer • Full Stack Developer • AI/ML Enthusiast</h3>
           </div>
-          <p className="text-gray-500 text-lg leading-relaxed">
+          <p className="text-gray-500 text-sm leading-relaxed font-lora">
           I'm Sai Dhanush Soma, a passionate Software Engineer with 1.5 years of hands-on development experience in building scalable, full-stack applications and optimizing system performance. With a strong foundation in data structures, algorithms, and system design, I thrive in fast-paced, agile environments and enjoy solving real-world problems through clean, efficient code.
 <br></br>
 My background spans research-driven blockchain monitoring systems and production-grade full-stack platforms using modern tech stacks like MERN, Java Servlets, LangChain, and Spring Boot. I bring a unique blend of backend efficiency, frontend finesse, and AI integration experience—most recently showcased in a smart home AI agent system using GPT-4, LangChain, and vector search with Elasticsearch.
 
 Currently pursuing my Master’s in Computer Science at the Illinois Institute of Technology, I'm eager to contribute to innovative projects where I can apply my skills in cloud-native development, LLM-powered tools, and end-to-end system architecture
           </p>
-          <p className="text-gray-600 text-base">
+          <p className="text-gray-600 text-sm font-lora">
             I'm currently pursuing my Master’s in Computer Science at Illinois Tech and always exploring
             new ideas to code into reality.
           </p>
           <div className="pt-4">
-            <a
-              href="mailto:stevesid161201@gmail.com"
-              className="inline-block bg-blue-600 hover:bg-blue-500 text-white font-open-sans py-2 px-6 rounded-full transition duration-300 shadow-md"
-            >
-              📧 Contact Me
-            </a>
+          <a
+  href="mailto:stevesid161201@gmail.com"
+  className="inline-block"
+  style={{ WebkitTapHighlightColor: 'transparent' }}
+>
+  <img
+    src={contact}
+    alt="Contact Button"
+    className="w-28 max-sm:w-52 max-sm:mt-[-20px] md:w-44 lg:w-64 xl:w-72 object-contain transition-transform duration-300 hover:scale-110"
+  />
+</a>
+
+
+
+
+
+
           </div>
         </motion.div>
       </div>

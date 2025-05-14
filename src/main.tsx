@@ -1,10 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
-import "particles.js";
-
+// import "particles.js";
 
 import "./index.css";
 import sid from "./assets/port - Copy2.png";
-import email from "./assets/video/icons8-email.gif"
+import email from "./assets/video/icons8-email.gif";
 import { TypeAnimation } from "react-type-animation";
 
 import videoBg from "./assets/video/bg.mp4";
@@ -35,7 +34,11 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
       const scrollTop = window.scrollY;
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
@@ -43,8 +46,28 @@ export default function Home() {
       setScrollProgress(progress);
     };
 
+    // Call handleScroll immediately on page load
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        if (window.scrollY > 10) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, []);
 
   // useEffect(() => {
@@ -70,143 +93,246 @@ export default function Home() {
   //   };
   // }, []);
 
-  {/* Nav Elements Hover Movement */}
-  {/* Nav Elements Hover Movement */}
+  {
+    /* Nav Elements Hover Movement */
+  }
+  {
+    /* Nav Elements Hover Movement */
+  }
 
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
 
-  
-  
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isMenuOpen]);
 
   return (
     <div ref={containerRef} className="  flex flex-col">
-       <nav
-      className={`w-full py-10 max-sm:py-12  px-4 lg:px-12 lg:py-11 fixed top-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 shadow-md backdrop-blur-md" : "bg-transparent"
-}`}
-    >
-      <div className="flex justify-between items-center">
-        {/* Logo or Title (optional) */}
-        <div className="text-xl font-bold font-playfair text-black">
-          Sid's Portfolio
-        </div>
-
-        {/* Desktop Nav */}
-        <ul
-          className={`hidden lg:flex gap-12 text-[25px] text-black font-playfair font-semibold`}
-        >
-          <li className="hover:underline cursor-pointer" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>about</li>
-<li className="hover:underline cursor-pointer" onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}>experience</li>
-<li className="hover:underline cursor-pointer" onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}>projects</li>
-<li className="hover:underline cursor-pointer" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>contact</li>
-          <li className="flex gap-5 ml-4">
-            <a
-              href="https://www.linkedin.com/in/ssdhanush/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://img.icons8.com/?size=100&id=nTY9sWZezkri&format=png&color=000000"
-                alt="Linked In"
-                className="w-10 h-10 hover:scale-110 transition-transform"
-              />
-            </a>
-            <a
-              href="https://github.com/Ssdsai"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://img.icons8.com/?size=100&id=LoL4bFzqmAa0&format=png&color=000000"
-                alt="GitHub"
-                className="w-10 h-10 rounded-[35px] hover:scale-110 transition-transform"
-              />
-            </a>
-            <a
-              href="https://discord.com/channels/sid161201"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://img.icons8.com/?size=100&id=jCIaYGMYhY9d&format=png&color=000000"
-                alt="Discord"
-                className="w-10 h-10 rounded-[35px] hover:scale-110 transition-transform"
-              />
-            </a>
-            
-          </li>
-        </ul>
-
-        {/* Hamburger Icon */}
-        <div
-          className="lg:hidden cursor-pointer z-50"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <div className="space-y-1">
-            <div className="w-8 h-1 bg-black rounded" />
-            <div className="w-8 h-1 bg-black rounded" />
-            <div className="w-8 h-1 bg-black rounded" />
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`lg:hidden absolute top-16 left-0 w-full bg-white/90 backdrop-blur-md z-40 transition-all duration-500 ease-in-out ${
-          isMenuOpen ? "opacity-100 translate-y-0 mt-[-10px]" : "opacity-0 -translate-y-5 "
+      <nav
+        className={`fixed w-full py-10 max-sm:py-12  px-4 lg:px-12 lg:py-11 fixed top-0 z-50 transition-all duration-300 ease-in-out ${
+          scrolled ? "bg-white/80 shadow-md backdrop-blur-md" : "bg-transparent"
         }`}
       >
-        <ul className="flex flex-col items-center gap-6 py-6 text-[18px] font-playfair text-black font-medium">
-          <li onClick={() => setIsMenuOpen(false)} className="hover:underline">about</li>
-          <li onClick={() => setIsMenuOpen(false)} className="hover:underline">experience</li>
-          <li onClick={() => setIsMenuOpen(false)} className="hover:underline">projects</li>
-          <li onClick={() => setIsMenuOpen(false)} className="hover:underline">contact</li>
-          <div className="flex gap-5 mt-2">
+        <div className="flex justify-between items-center">
+          {/* Logo or Title (optional) */}
+          <div className="text-xl font-bold font-playfair text-black">
             <a
-              href="https://www.linkedin.com/in/ssdhanush/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="home"
+              className="border border-transparent  rounded-lg px-6 py-2"
             >
-              <img
-                src="https://img.icons8.com/?size=100&id=nTY9sWZezkri&format=png&color=000000"
-                alt="Linked In"
-                className="w-8 h-8"
-              />
-            </a>
-            <a
-              href="https://github.com/Ssdsai"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://img.icons8.com/?size=100&id=LoL4bFzqmAa0&format=png&color=000000"
-                alt="GitHub"
-                className="w-8 h-8 rounded-[35px]"
-              />
-            </a>
-            <a
-              href="https://discord.com/channels/sid161201"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://img.icons8.com/?size=100&id=jCIaYGMYhY9d&format=png&color=000000"
-                alt="Discord"
-                className="w-8 h-8 rounded-[35px]"
-              />
+              Sid's Portfolio
             </a>
           </div>
-        </ul>
-      </div>
-    </nav>
 
+          {/* Desktop Nav */}
+          <ul
+            className={`hidden lg:flex gap-12 text-[25px] text-black font-playfair font-semibold`}
+          >
+            <li
+              className="hover:text-gray-500 cursor-pointer"
+              onClick={() =>
+                document
+                  .getElementById("about")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              about
+            </li>
+            <li
+              className="hover:text-gray-500 cursor-pointer"
+              onClick={() =>
+                document
+                  .getElementById("work")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              projects
+            </li>
+            <li
+              className="hover:text-gray-500 cursor-pointer"
+              onClick={() =>
+                document
+                  .getElementById("experience")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              experience
+            </li>
+            <li
+              className="hover:text-gray-500 cursor-pointer"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              contact
+            </li>
+            <li className="flex gap-5 ml-4">
+              <a
+                href="https://www.linkedin.com/in/ssdhanush/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=nTY9sWZezkri&format=png&color=000000"
+                  alt="Linked In"
+                  className="w-10 h-10 hover:scale-125 transition-transform"
+                />
+              </a>
+              <a
+                href="https://github.com/Ssdsai"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=LoL4bFzqmAa0&format=png&color=000000"
+                  alt="GitHub"
+                  className="w-10 h-10 rounded-[35px] hover:scale-125 transition-transform"
+                />
+              </a>
+              <a
+                href="https://discord.com/channels/sid161201"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=jCIaYGMYhY9d&format=png&color=000000"
+                  alt="Discord"
+                  className="w-10 h-10 rounded-[35px] hover:scale-125 transition-transform"
+                />
+              </a>
+            </li>
+          </ul>
+
+          {/* Hamburger Icon */}
+          <div
+            className="lg:hidden cursor-pointer z-50"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+          >
+            <div className="space-y-1">
+              <div className="w-8 h-1 bg-black rounded" />
+              <div className="w-8 h-1 bg-black rounded" />
+              <div className="w-8 h-1 bg-black rounded" />
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          ref={menuRef}
+          className={`lg:hidden absolute top-16 left-0 w-full bg-white/90 backdrop-blur-md z-40 transition-all duration-500 ease-in-out ${
+            isMenuOpen
+              ? "opacity-100 translate-y-0 mt-[15px]"
+              : "opacity-0 -translate-y-5 "
+          }`}
+        >
+          <ul className="flex flex-col items-center  text-[18px] font-playfair text-black font-medium ">
+            <li
+              className="hover:underline cursor-pointer w-full h-full  gap-6 py-3"
+              onClick={() => {
+                document
+                  .getElementById("about")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
+            >
+              about
+            </li>
+            <li
+              className="hover:underline cursor-pointer  w-full h-full gap-6 py-3"
+              onClick={() => {
+                document
+                  .getElementById("experience")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
+            >
+              experience
+            </li>
+            <li
+              className="hover:underline cursor-pointer  w-full h-full gap-6 py-3"
+              onClick={() => {
+                document
+                  .getElementById("work")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
+            >
+              projects
+            </li>
+            <li
+              className="hover:underline cursor-pointer w-full h-full  gap-6 py-3"
+              onClick={() => {
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
+            >
+              contact
+            </li>
+
+            <div className="flex gap-5 mt-2 py-2">
+              <a
+                href="https://www.linkedin.com/in/ssdhanush/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=nTY9sWZezkri&format=png&color=000000"
+                  alt="Linked In"
+                  className="w-8 h-8"
+                />
+              </a>
+              <a
+                href="https://github.com/Ssdsai"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=LoL4bFzqmAa0&format=png&color=000000"
+                  alt="GitHub"
+                  className="w-8 h-8 rounded-[35px]"
+                />
+              </a>
+              <a
+                href="https://discord.com/channels/sid161201"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=jCIaYGMYhY9d&format=png&color=000000"
+                  alt="Discord"
+                  className="w-8 h-8 rounded-[35px]"
+                />
+              </a>
+            </div>
+          </ul>
+        </div>
+      </nav>
+      
 
       {/* Road + Bus */}
       <div
-  className={`fixed top-20 left-0 w-full h-32 flex items-center mt-[-25px] lg:mt-[-18px] md:mt-[-35px] transition-all duration-300 ${
-    isMenuOpen ? "z-30" : "z-50"
-  }`}
->
-
+        className={`fixed top-20 left-0 w-full h-32 flex items-center mt-[-25px] lg:mt-[-18px] md:mt-[-35px] transition-all duration-300 ${
+          isMenuOpen ? "z-30" : "z-50"
+        }`}
+      >
         <div className="h-[4px] bg-black w-full mx-12 rounded mt-[2px]" />
         <img
           ref={busRef}
@@ -221,6 +347,7 @@ export default function Home() {
           }}
         />
       </div>
+      
 
       {/* <Spline className="p-4 w-[20%] h-[20%] shadow-lg" scene="https://prod.spline.design/cQBHcW-AdrRvh6AS/scene.splinecode" /> */}
     </div>
@@ -313,7 +440,7 @@ export const ImageSlider = () => {
 // export const Banner = () => {
 //   return (
 //     <div className="relative w-full h-[55vh] text-center overflow-hidden object-contain p-10 max-sm:h-[80vh]">
-      
+
 //       <div className="absolute w-[200px] h-[450px] top-[10%] left-1/2 -translate-x-1/2 [transform-style:preserve-3d] [transform:perspective(1000px)] animate-autoRun z-20">
 //         {images.map((img, index) => (
 //           <div
@@ -336,6 +463,3 @@ export const ImageSlider = () => {
 //     </div>
 //   );
 // };
-
-
-
