@@ -58,7 +58,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import contact from "./assets/about-contact.png";
+import contact from "./assets/about/about-contact.png";
 
 import hotjar from "./assets/about/hotjar.png";
 import spline from "./assets/about/spline.png";

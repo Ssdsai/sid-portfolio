@@ -228,16 +228,16 @@ function App() {
   // useLocoScroll(startLoco, containerRef);
 
   return (
-    <div className="App  " ref={containerRef} data-scroll-container>
+    <div className="App overflow-x-hidden " ref={containerRef} data-scroll-container>
        <Home />
       <Landing />
       
-      <section data-scroll-section id="about">
-      <h3 className="mt-[-15vh] text-black font-brush text-[30px]" >
+      <section data-scroll-section id="about" className="">
+      <h3 className="mt-[-25vh] text-black font-brush text-[30px]" >
         
             Chapter 1
             <h1 className="font-autumn text-[80px] mt-[-15px]">About</h1>
-            <img src={guyabout} alt="About Guy Standing" className="absolute right-6 mt-[-400px] hidden sm:block" />
+            {/* <img src={guyabout} alt="About Guy Standing" className="absolute right-6 mt-[-400px] hidden sm:block" /> */}
       </h3>
       <div className="relative z-10 mt-[80vh]" >
           <About />

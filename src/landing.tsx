@@ -120,7 +120,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 import videoBg from "./assets/video/bg.mp4";
 import { TypeAnimation } from "react-type-animation";
-import sid from "./assets/port - Copy2.png";      
+import sid from "./assets/profile.png";      
 
 export default function Home() {
   const containerRef = useRef(null);

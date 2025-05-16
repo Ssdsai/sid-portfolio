@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./index.css";
 import gifenigma from "./assets/projects/gif enigma/gifenigma.jpeg"; ///project 1
-import mywell from "./assets/MY WELL.png"; //// project 2
+import mywell from "./assets/projects/my well/MY WELL.png"; //// project 2
 import cuisineconnect from "./assets/projects/cuisine-connect/logo.png"; //////  project 3
 import work from "./assets/video/work.mp4";
 

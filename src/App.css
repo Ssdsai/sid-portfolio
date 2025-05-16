@@ -1,15 +1,3 @@
-html,
-body,
-#root,
-.App {
-  margin: 0;
-  padding: 0;
-  height: auto;
-  min-height: 100vh;
-  overflow: visible;
-}
-
-
 .App {
   text-align: center;
 }
