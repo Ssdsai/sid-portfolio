@@ -38,17 +38,19 @@ function Work() {
   };
 
   {/*GIF Enigma Reddit Start*/}
-  const tools = [
+  const gif_tools = [
     { name: "ReactJS", src:"https://img.icons8.com/?size=100&id=25Sjy8fKExYA&format=png&color=000000" },
     { name: "TailwindCSS", src:"https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000" },
     { name: "TypeScript", src:"https://img.icons8.com/?size=100&id=wpZmKzk11AzJ&format=png&color=000000" },
-    // Add other tools here
   ];
   {/*GIF Enigma Reddit Start*/}
 
   {/*My Well Start*/}
   const mywell_images = [
     MyWell_UserAuth, MyWell_Login, MyWell_Create, MyWell_Dashboard, MyWell_Alert, MyWell_UserUI, MyWell_Profile, MyWell_VideoDash, MyWell_MessageUI, MyWell_VideoCall, MyWell_Recommendation
+  ];
+  const mywell_tools = [
+    { name: 'Figma', src: 'https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000'},
   ];
   {/*My Well End*/}
 
@@ -100,49 +102,52 @@ function Work() {
         {/* ----------- Project 1 ----------- */}
         <div
           onClick={() => toggle(1)}
-          className="group block border-b border-gray-700 py-6 px-6 width-[150%] transition duration-300 bg-white hover:bg-gray-800 bg-opacity-100 cursor-pointer
+          className="group block border-b border-gray-700 py-3 px-6 width-[150%] transition duration-300 bg-white hover:bg-gray-800 bg-opacity-100 cursor-pointer
           rounded-xl"
         >
           <div className="flex items-center gap-6">
             <img
               src={gifenigma}
               alt="GIF ENIGMA"
-              className="w-20 h-20 object-cover rounded-md"
+              className="w-20 h-20 object-cover rounded-md max-sm:mt-4"
             />
             <div className="flex-1">
               <div className="flex justify-between">
-                <h3 className="text-2xl md:text-3xl font-abel text-black group-hover:text-[#FFFFFF] group-hover:translate-x-2 transform transition duration-300">
-                  GIF ENIGMA Reddit
+                <h3 className="text-2xl md:text-3xl font-abel max-sm:text-md max-sm:left-10 max-sm:absolute text-black group-hover:text-[#FFFFFF] group-hover:translate-x-2 transform transition duration-300">
+                  GIF ENIGMA
                 </h3>
-                <span className="text-gray-500 group-hover:text-gray-700 transition duration-300">
+                <span className="text-gray-500 group-hover:text-gray-700 transition duration-300 max-sm:ml-16">
                   {open === 1 ? "−" : "→"}
                 </span>
               </div>
 
-              <div className="mt-1 flex items-center gap-4 flex-wrap text-sm">
-                <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-1 px-3 rounded-full font-medium shadow-md">
-                  Devvit Game
+              <div className="mt-2 flex items-center gap-4 flex-wrap text-sm max-sm:mt-4">
+                <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-1 px-3 rounded-full font-medium shadow-md max-sm:mt-[-12px] max-sm:px-2">
+                  Full Stack Web App
                 </span>
-                <span className="text-gray-500">
+                <span className="text-gray-500 max-sm:text-[13px] max-sm:mt-[-8px] font-lora">
                   Built Feb 2025 - March 2025
                 </span>
               </div>
 
-              <p className="mt-2 text-gray-600 text-sm md:text-base">
+              <p className="mt-1 text-gray-500 text-sm md:text-base font-lora max-sm:text-[12px] lg:text-[18px] leading-snug md:leading-normal lg:leading-relaxed">
                 An animated guessing game where every GIF is a clue to a word or
                 phrase
               </p>
 
+              {/* <span className="text-gray-500 group-hover:text-gray-700 transition duration-300 max-sm:absolute max-sm:left-12 max-sm:text-[12px] max-sm:mt-1">
+                  {open === 1 ? "−" : "Click to View →"}
+              </span> */}
               {/* Buttons */}
               <div
-                className="mt-4 flex gap-4"
+                className="mt-4 flex gap-4 max-sm:gap-12 max-sm:mt-3"
                 onClick={(e) => e.stopPropagation()}
               >
                 <a
                   href="https://www.reddit.com/r/PlayGIFEnigma/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 transition"
+                  className="inline-flex items-center max-sm:right-16 max-sm:text-[13px] max-sm:absolute max-sm:flex-row gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 transition"
                 >
                   🔗 Live Now
                 </a>
@@ -150,7 +155,7 @@ function Work() {
                   href="https://github.com/Ssdsai/gif-enigma"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-gray-500 hover:text-gray-600 transition"
+                  className="inline-flex items-center max-sm:text-[13px] gap-1 text-sm font-medium text-gray-500 hover:text-gray-600 transition"
                 >
                   💻 GitHub
                 </a>
@@ -163,14 +168,16 @@ function Work() {
             <div className="mt-6 md:flex md:gap-6">
               {/* Info Left */}
               <div className="md:w-1/2 hover:text-gray-500">
-                <p className="text-gray-500  mb-4">
+                <p className="text-gray-500  mb-4 max-sm:text-[13px] lg:text-[15px] font-lora">
                   A Reddit-native guessing game using Devvit. Users guess based
                   on animated clues.
                 </p>
-                <ul className="text-sm text-gray-500  list-disc list-inside">
-                  <li>Built with React + Devvit SDK</li>
+                <ul className="text-sm text-gray-500  list-disc list-inside max-sm:text-[12px] font-winky">
+                  <li>Each puzzle follows a carefully designed progression from abstract connections to more direct clues, guided by suggestions from Google's Gemini API to search terms</li>
+                  <li>Wide variety of visual hints from categories such as 🎬 Movies, 🎮 Games, 📚 Books, and General</li>
+                  <li>Built with React, Typescript and Tailwindcss + Devvit SDK</li>
+                  <li>Tenor API + Gemini API for gif's and terms</li>
                   <li>Hosted on Reddit as a native app</li>
-                  <li>Game state managed using subreddit posts</li>
                 </ul>
               </div>
 
@@ -178,7 +185,7 @@ function Work() {
               <div className="md:w-1/2 mt-4 md:mt-0">
                 <div className="flex justify-center max-sm:justify-center">
                   <iframe
-                    className="w-[70%] aspect-video rounded-lg shadow max-sm:w-[90%] "
+                    className="w-[70%] aspect-video rounded-lg shadow max-sm:w-[90%] md:w-[100%]"
                     src="https://youtube.com/embed/YVxr9ajbcGg"
                     title="YouTube video player"
                     frameBorder="0"
@@ -193,58 +200,61 @@ function Work() {
 
             {/* Tools Section */}
 {open === 1 && (
-  <div className=" max-sm:mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-    {tools.map((tool, index) => (
+  <div className="max-sm:mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-28 max-sm:gap-6 max-sm:flex max-sm:flex-row w-fit mx-auto">
+    {gif_tools.map((tool, index) => (
       <div key={index} className="text-center flex flex-col items-center justify-center">
         <img
           src={tool.src}
           alt={tool.name}
-          className="w-16 h-16 mx-auto mb-2 object-contain"
+          className="w-14 h-14 max-sm:w-8 max-sm:h-8 mx-auto mb-1 object-cover"
         />
-        <p className="text-sm text-gray-500">{tool.name}</p>
+        <p className="text-sm max-sm:text-[12px] font-winky text-gray-500 leading-tight">{tool.name}</p>
       </div>
     ))}
   </div>
 )}
+
 
         </div>
 
         {/* ----------- Project 2 ----------- */}
         <div
           onClick={() => toggle(2)}
-          className="group block border-b border-gray-700 py-6 px-6 width-[150%] transition duration-300 bg-white  bg-opacity-100 cursor-pointer
+          className="group block border-b border-gray-700 py-3 px-6 width-[150%] transition duration-300 bg-white  bg-opacity-100 cursor-pointer
           rounded-xl"
         >
           <div className="flex items-center gap-6">
             <img
               src={mywell}
-              alt="GIF ENIGMA"
-              className="w-20 h-20 object-cover rounded-md"
+              alt="MY WELL"
+              className="w-20 h-20 object-cover rounded-md max-sm:mt-4"
             />
             <div className="flex-1">
               <div className="flex justify-between">
-                <h3 className="text-2xl md:text-3xl font-abel text-black  group-hover:translate-x-2 transform transition duration-300">
+                <h3 className="text-2xl md:text-3xl font-abel text-black max-sm:text-md max-sm:left-10 max-sm:absolute text-black  group-hover:translate-x-2 transform transition duration-300">
                   MY WELL APP
                 </h3>
-                <span className="text-gray-500 group-hover:text-gray-700 transition duration-300">
+                <span className="text-gray-500 group-hover:text-gray-700 transition duration-300 max-sm:ml-16">
                   {open === 2 ? "−" : "→"}
                 </span>
               </div>
 
-              <div className="mt-1 flex items-center gap-4 flex-wrap text-sm">
-                <span className="bg-gradient-to-r from-black to-white text-white py-1 px-3 rounded-full font-medium shadow-md">
+              <div className="mt-2 flex items-center gap-4 flex-wrap text-sm max-sm:mt-4">
+                <span className="bg-gradient-to-r from-black to-white text-white py-1 px-3 rounded-full font-medium shadow-md max-sm:mt-[-10px] max-sm:px-2">
                   UI Designs
                 </span>
-                <span className="text-gray-500">Built in April 2025</span>
+                <span className="text-gray-500 max-sm:text-[14px] max-sm:mt-[-4px] font-lora">
+                  Built in April 2025
+                </span>
               </div>
 
-              <p className="mt-2 text-gray-600 text-sm md:text-base">
+              <p className="mt-1 text-gray-600 text-sm md:text-base font-lora max-sm:text-[12px] lg:text-[18px] leading-snug md:leading-normal lg:leading-relaxed">
                 Personal Healthcare Management System for 65+ Years
               </p>
 
               {/* Buttons */}
               <div
-                className="mt-4 flex gap-4"
+                className="mt-3 flex gap-4"
                 onClick={(e) => e.stopPropagation()}
               >
                 <a
@@ -253,7 +263,7 @@ function Work() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 transition"
                 >
-                  🔗 Live Now
+                  🔗 Live Now (Figma File)
                 </a>
                 <a
                   href=" "
@@ -272,20 +282,38 @@ function Work() {
             <div className="mt-6 md:flex md:gap-6">
               {/* Info Left */}
               <div className="md:w-1/2 hover:text-gray-500">
-                <p className="text-gray-500  mb-4">
+                <p className="text-gray-500 mb-4 max-sm:text-[13px] lg:text-[15px] font-lora">
                   UI Designs with Figma
                 </p>
-                <ul className="text-sm text-gray-500  list-disc list-inside">
+                <ul className="text-sm text-gray-500  list-disc list-inside max-sm:text-[12px] font-winky">
                   <li>Built with React + Devvit SDK</li>
                   <li>Hosted on Reddit as a native app</li>
                   <li>Game state managed using subreddit posts</li>
+                    {/* Tools Section */}
+{open === 2 && (
+  <div className="max-sm:mt-8 md:mt-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 ">
+    {mywell_tools.map((tool, index) => (
+      <div key={index} className="text-center flex flex-col items-center justify-center">
+        <img
+          src={tool.src}
+          alt={tool.name}
+          className="w-14 h-14 max-sm:w-8 max-sm:h-8 mx-auto mb-1 object-cover"
+        />
+        <p className="text-sm max-sm:text-[12px] font-winky text-gray-500 leading-tight">{tool.name}</p>
+      </div>
+    ))}
+  </div>
+)}
                 </ul>
+
+                
+
               </div>
 
               {/* Media Right */}
-              <div className="w-full md:w-1/2 mt-4 md:mt-0 px-4 sm:px-6 lg:px-8">
+              <div className="w-full md:w-1/2 mt-4 md:mt-48 px-4 sm:px-6 lg:px-8">
   <div className="relative w-full min-h-[500px] sm:min-h-[550px] lg:min-h-[600px] text-center overflow-visible object-contain p-4 sm:p-6 md:p-8">
-    <div className="relative mx-auto w-[200px] h-[500px] sm:w-[220px] sm:h-[520px] lg:w-[240px] lg:h-[540px] [transform-style:preserve-3d] [transform:perspective(1000px)] animate-autoRun z-20">
+    <div className="relative mx-auto w-[200px] h-[500px] max-sm:w-[230px] sm:h-[520px] md:w-[230px] md:ml-[-170px] lg:w-[230px] lg:h-[540px] [transform-style:preserve-3d] [transform:perspective(1000px)] animate-autoRun z-20">
       {mywell_images.map((img, index) => (
         <div
           key={index}
@@ -311,39 +339,43 @@ function Work() {
               
             </div>
           )}
+
+        
+          
         </div>
 
         {/* ----------- Project 3 ----------- */}
         <div
           onClick={() => toggle(3)}
-          className="group block border-b border-gray-700 py-6 px-6 width-[150%] transition duration-300 bg-white hover:bg-gray-800 bg-opacity-100 cursor-pointer
+          className="group block border-b border-gray-700 py-3 px-6 width-[150%] transition duration-300 bg-white hover:bg-gray-800 bg-opacity-100 cursor-pointer
           rounded-xl"
         >
           <div className="flex items-center gap-6">
             <img
               src={cuisineconnect}
               alt="Cuisine Connect"
-              className="w-20 h-30 object-cover rounded-md"
+              className="w-20 h-30 object-cover rounded-md max-sm:mt-4"
             />
             <div className="flex-1">
               <div className="flex justify-between">
-                <h3 className="text-2xl md:text-3xl font-abel text-black group-hover:text-[#FFFFFF] group-hover:translate-x-2 transform transition duration-300">
+                <h3 className="text-2xl md:text-3xl max-sm:text-md max-sm:left-10 max-sm:absolute font-abel text-black group-hover:text-[#FFFFFF] group-hover:translate-x-2 transform transition duration-300">
                   Cuisine Connect
                 </h3>
-                <span className="text-gray-500 group-hover:text-gray-700 transition duration-300">
+                <span className="text-gray-500 group-hover:text-gray-700 transition duration-300 max-sm:ml-16">
                   {open === 3 ? "−" : "→"}
                 </span>
               </div>
 
-              <div className="mt-1 flex items-center gap-4 flex-wrap text-sm">
-                <span className="bg-gradient-to-r from-blue-800 to-purple-500 text-white py-1 px-3 rounded-full font-medium shadow-md">
+              <div className="mt-2 flex items-center gap-4 flex-wrap text-sm max-sm:mt-4">
+                <span className="bg-gradient-to-r from-blue-800 to-purple-500 text-white py-1 px-3 rounded-full font-medium shadow-md max-sm:mt-[-7px] max-sm:px-2">
                   Full Stack Web App
                 </span>
-                <span className="text-gray-500">Built Aug 2024 - Dec 2025</span>
+                <span className="text-gray-500 max-sm:text-[14px]  max-sm:mt-[-5px] text-[15px] font-lora">
+                  Built Aug 2024 - Dec 2024</span>
               </div>
 
-              <p className="mt-2 text-gray-600 text-sm md:text-base">
-                Order Your fav cuisine
+              <p className="mt-1 text-gray-500 text-[30px] max-sm:text-[13px] md:text-base font-lora leading-snug md:leading-normal lg:leading-relaxed">
+                Food Ordering Website with AI Assistance
               </p>
 
               {/* Buttons */}

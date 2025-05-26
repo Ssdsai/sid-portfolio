@@ -1,6 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-// import "particles.js";
-
 import "./index.css";
 import sid from "./assets/port - Copy2.png";
 import email from "./assets/video/icons8-email.gif";
@@ -347,26 +345,12 @@ export default function Home() {
           }}
         />
       </div>
-      
-
       {/* <Spline className="p-4 w-[20%] h-[20%] shadow-lg" scene="https://prod.spline.design/cQBHcW-AdrRvh6AS/scene.splinecode" /> */}
     </div>
   );
 }
 
-// require("./assets/react.png"),
-// require("./assets/tailwind.png"),
-// require("./assets/javascript.png"),
-// require("./assets/typescript.png"),
-// require("./assets/nodejs.png"),
-
 const images = [
-  // require("./assets/Cuisine Connect.png"),
-  // require("./assets/Cuisine Connect3.png"),
-  // require("./assets/Cuisine Connect5.png"),
-  // require("./assets/Cuisine Connect9.png"),
-  // require("./assets/Cuisine Connect.png"),
-  // require("./assets/Cuisine Connect9.png"),
 
   require("./assets/projects/my well/User Authentication 1.jpg"),
   require("./assets/projects/my well/Login Page 2.jpg"),

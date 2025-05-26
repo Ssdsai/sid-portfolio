@@ -183,6 +183,7 @@ import emailjs from "emailjs-com";
 import emailicon from "./assets/video/email-file.gif";
 import phone from "./assets/video/phone.gif";
 import resume from "./assets/video/resume.gif";
+import location from "./assets/location.gif";
 
 const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID as string;
 const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID as string;
@@ -231,11 +232,27 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         {/* LEFT SIDE */}
         <div className="flex flex-col justify-start items-start">
-          <h2 className="text-4xl font-shadows text-[80px] text-gray-900 max-sm:text-[60px]">
+          <h2 className="text-4xl font-shadows text-[80px] text-gray-900 max-sm:text-[50px]">
             Get in Touch !
+           <span className="flex felx-row">
+             <img
+                src="https://offloadmedia.feverup.com/secretchicago.com/wp-content/uploads/2021/01/19043815/Chicago-Bean-scaled.jpg"
+                alt="Chicago"
+                className="w-20 h-20  object-cover rounded-lg mt-8 sm:mb-0 sm:mr-6 mx-auto sm:mx-0"
+              />
+
+              <img
+                  src={location}
+                  alt="Location"
+                  className="w-10 h-10 mt-12 hover:scale-125 transition-transform max-sm:ml-[10px]"
+                />
+              <p className="font-lora text-[30px] text-gray-600 mt-[50px] ml-[10px] max-sm:text-[18px]">
+                Chicago, Illinois, USA
+              </p>
+           </span>
           </h2>
 
-          <div className="mt-20 space-y-4 text-gray-700 font-winky text-[30px]">
+          <div className="mt-20 space-y-4 max-sm:space-y-1 text-gray-700 font-winky text-[30px]">
             <p>
             <span className="inline-flex items-center gap-1">
             <a href="mailto:stevesid161201@gmail.com"><img
@@ -255,7 +272,7 @@ export default function Contact() {
               <br />
               <a
                 href="mailto:stevesid161201@gmail.com"
-                className="text-sky-600 hover:underline inline-flex gap-1"
+                className="text-sky-600 hover:underline inline-flex gap-1 max-sm:text-[20px]"
               >
                 
                  
@@ -285,7 +302,7 @@ export default function Contact() {
               <br />
               <a
                 href="tel:+7739706599"
-                className="text-sky-600 hover:underline inline-flex gap-1"
+                className="text-sky-600 hover:underline inline-flex gap-1 max-sm:text-[20px]"
               >
                 
                  

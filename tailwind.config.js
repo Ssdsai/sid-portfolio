@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        'mid-xl': '1400px', // custom breakpoint for larger monitors
+        'xl':'1280px',
+      },
       fontFamily: {
         'open-sans': ['"Open Sans"', 'sans-serif'],
         'playfair': ['"Playfair Display"', 'serif'],
@@ -13,6 +17,7 @@ module.exports = {
         'lora':['"Lora"', 'serif'],
         'brush':['"Caveat Brush", cursive'],
         'autumn': ['Autumn', 'sans-serif'],
+        'ancizar':['Ancizar Serif', 'serif'],
       },
     },
   },
