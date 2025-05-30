@@ -60,7 +60,7 @@ const Experience = ({ refProp }: ExperienceProps) => {
   return (
     // <div  ref={inViewRef} className={`transition-colors duration-1000 bg-transparent text-inherit`}>
     <section ref={refProp} data-scroll-section className="relative w-full  text-gray-900 py-20 px-4 sm:px-8 lg:px-20 ">
-    //{/* <section
+    {/* <section
     //   ref={refProp}
     //   className={`relative w-full py-20 px-4 sm:px-8 lg:px-20 ${
     //     isInView ? "bg-black text-white" : "bg-white text-black"
@@ -72,15 +72,15 @@ const Experience = ({ refProp }: ExperienceProps) => {
   <div className="flex flex-col lg:flex-row gap-8 w-full">
     
     {/* Education 2 */}
-    <div className="flex flex-col sm:flex-row items-center sm:items-start bg-white rounded-xl shadow-md p-6 w-full">
-  {/* Image Left */}
+    {/* <div className="flex flex-col sm:flex-row items-center sm:items-start bg-white rounded-xl shadow-md p-6 w-full">
+ 
   <img
     src="https://upload.wikimedia.org/wikipedia/en/9/96/Illinois_Institute_of_Technology_%28seal%29.svg"
     alt="Illinois Institute of Technology"
     className="w-32 h-32 object-cover rounded-lg mb-4 sm:mb-0 sm:mr-6 mx-auto sm:mx-0"
   />
 
-  {/* Info Right */}
+ 
   <div className="flex-1 text-center sm:text-left">
     <h1 className="text-2xl font-ancizar text-gray-800">Illinois Institute of Technology, Chicago, USA</h1>
     <p className="text-gray-700 font-lora text-md">Master's in Computer Science</p>
@@ -90,7 +90,29 @@ const Experience = ({ refProp }: ExperienceProps) => {
       Relevant Courses: Enterprise Web Applications, Machine Learning, Data Privacy & Security, Software Engineering
     </p>
   </div>
-</div>
+</div> */}
+
+      {/* Education 2 */}
+    <div className="flex flex-col sm:flex-row items-start bg-white rounded-xl shadow-md p-6 w-full">
+      {/* Image Left */}
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/9/96/Illinois_Institute_of_Technology_%28seal%29.svg"
+        alt="Presidency University"
+        className="w-32 h-32 max-sm:w-36 max-sm:h-36 object-cover rounded-lg mb-4 sm:mb-0 sm:mr-6 mx-auto sm:mx-0"
+      />
+
+
+      {/* Info Right */}
+      <div className="flex-1">
+        <h1 className="text-2xl font-ancizar text-gray-800">Illinois Institute of Technology, Chicago, USA</h1>
+        <p className="text-gray-700 font-lora text-md">Master's in Computer Science</p>
+        <p className="text-gray-500 text-sm mt-1 font-lora">GPA: 3.2/4.0 </p>
+        <p className="text-gray-500 text-sm font-lora">2023 - 2025</p>
+        <p className="text-gray-800 mt-2 text-sm font-lora">
+          Relevant Courses: Enterprise Web Applications, Machine Learning, Data Privacy & Security, Software Engineering and Computer Networks
+        </p>
+      </div>
+    </div>
 
 
     {/* Education 1 */}
@@ -107,13 +129,15 @@ const Experience = ({ refProp }: ExperienceProps) => {
       <div className="flex-1">
         <h1 className="text-2xl font-ancizar text-gray-800">Presidency University, Bengaluru, India</h1>
         <p className="text-gray-700 font-lora text-md">Bachelors of Engineering in Computer Science</p>
-        <p className="text-gray-500 text-sm mt-1 font-lora">GPA: 8.49 / 10</p>
+        <p className="text-gray-500 text-sm mt-1 font-lora">GPA: 8.49/10</p>
         <p className="text-gray-500 text-sm font-lora">2019 - 2023</p>
         <p className="text-gray-800 mt-2 text-sm font-lora">
           Key Courses: Data Structures and Algorithms, DBMS, Operating Systems, Mobile Application Development, Object Oriented Programming
         </p>
       </div>
     </div>
+
+
   </div>
 </div>
 

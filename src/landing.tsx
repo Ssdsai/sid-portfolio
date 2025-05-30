@@ -2,7 +2,8 @@ import React, { useRef, useState, useEffect } from "react";
 import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 import videoBg from "./assets/video/bg.mp4";
 import { TypeAnimation } from "react-type-animation";
-import sid from "./assets/profile.png";      
+import sid from "./assets/profile.png";
+import fallback from "./assets/video/fallback.png";      
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -45,6 +46,8 @@ export default function Home() {
           loop
           muted
           playsInline
+          preload="none" // <-- Add this
+          poster={fallback}
         />
       </div>
 

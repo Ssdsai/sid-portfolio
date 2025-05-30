@@ -37,6 +37,13 @@ html, body {
   }
 }
 
+video {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+
 .animate-autoRun {
   animation: autoRun 50s linear infinite;
 }

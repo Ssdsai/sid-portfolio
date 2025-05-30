@@ -336,7 +336,7 @@ export default function Home() {
           ref={busRef}
           src="https://img.icons8.com/?size=100&id=112232&format=png&color=000000"
           alt="Bus"
-          className="absolute transition-transform duration-300 mt-[-62px]"
+          className="absolute transition-transform duration-300 mt-[-57px]"
           style={{
             left: `${scrollProgress * 100}%`,
             transform: "translateX(-50%)",

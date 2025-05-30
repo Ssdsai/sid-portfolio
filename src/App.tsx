@@ -16,10 +16,13 @@ import guywork from "./assets/projects/guywork.jpg";
 import guywork1 from "./assets/projects/guywork1.mp4";
 import education from "./assets/experience/education.mp4";
 import experience from "./assets/experience/experience.mp4";
+
+import IntroAnimation from "./Loader"; // Import the animation component
 // import guywork1 from "./assets/projects/work.gif";
 
 function App() {
   // const ref = useRef<HTMLElement>(null);
+  const [showAnimation, setShowAnimation] = useState(true);
   const containerRef = useRef(null);
   // const { scrollYProgress } = useScroll({
   //   target: containerRef,
@@ -31,7 +34,18 @@ function App() {
     triggerOnce: false,
   });
 
+   useEffect(() => {
+    // Lock scroll while animation is showing
+    if (showAnimation) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+  }, [showAnimation]);
+
+
   return (
+     <>
+      {showAnimation && <IntroAnimation onComplete={() => setShowAnimation(false)} />}
+
+      {!showAnimation && (
     <div className="App overflow-x-hidden " ref={containerRef} data-scroll-container>
        <Home />
       <Landing />
@@ -111,12 +125,12 @@ function App() {
       </section> */}
 
       <section data-scroll-section id="about" className="relative py-[10vh] px-4">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10 mt-[-70vh]">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10 mt-[-60vh]">
 
           {/* Video - Left */}
           <div className="w-full lg:w-1/3 flex justify-center">
             <video
-              className="w-[160%] h-auto object-cover z-10 mt-[10vh] hidden md:block"
+              className="w-[160%] h-auto object-cover z-10 mt-[10vh] hidden md:block "
               src={guyabout1}
               autoPlay
               loop
@@ -175,7 +189,7 @@ function App() {
               playsInline
                   />
           </h3>
-          <div className="relative z-10 mt-[22vh]">
+          <div className="relative z-10 mt-[30vh]">
             <Work />
           </div>
         </div>
@@ -214,7 +228,7 @@ function App() {
           </div>
 
           </h3>
-          <div className="relative z-10 mt-[12vh] lg:mt-[32vh]">
+          <div className="relative z-10 mt-[12vh] lg:mt-[40vh]">
             <Experience refProp={experienceInViewRef} />
           </div>
         </div>
@@ -227,6 +241,8 @@ function App() {
       <Chatbot />
       
     </div>
+    )}
+    </>
   );
 }
 
