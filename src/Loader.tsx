@@ -89,90 +89,92 @@ const IntroAnimation: React.FC<Props> = ({ onComplete }) => {
   const [stage, setStage] = useState<"sid" | "full">("sid");
 
   useEffect(() => {
-    const stageTimer = setTimeout(() => setStage("full"), 1500); // after 1.5s move to stage 2
-    const exitTimer = setTimeout(onComplete, 4500); // complete after total 4.5s
+    const stageTimer = setTimeout(() => setStage("full"), 1500);
+    const exitTimer = setTimeout(onComplete, 4500);
     return () => {
       clearTimeout(stageTimer);
       clearTimeout(exitTimer);
     };
   }, [onComplete]);
 
+  const AnimatedLetter = ({
+    letter,
+    delay = 0,
+  }: {
+    letter: string;
+    delay?: number;
+  }) => (
+    <motion.span
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay }}
+      layout
+    >
+      {letter}
+    </motion.span>
+  );
+
   return (
     <div className="fixed inset-0 bg-black flex items-center justify-center z-[9999] px-4">
-      {/* Wrapper for layout shift animation */}
       <motion.div
         className="text-white text-5xl sm:text-7xl font-bold font-shadows whitespace-nowrap"
         style={{ userSelect: "none", display: "flex", gap: "0.75ch" }}
-        layout // important for layout transition
+        layout
       >
-        {stage === "sid" ? (
-          <>
-            {/* S */}
-            <motion.span
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              layout
-            >
-              S
-            </motion.span>
-            {/* I */}
-            <motion.span
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              layout
-            >
-              I
-            </motion.span>
-            {/* D */}
-            <motion.span
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              layout
-            >
-              D
-            </motion.span>
-          </>
-        ) : (
-          <>
-            {/* SAI */}
-            <motion.span layout>S</motion.span>
-            <motion.span layout>A</motion.span>
-            <motion.span layout>I</motion.span>
+        {/* S */}
+        <motion.span
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0 }}
+          layout
+        >
+          S
+        </motion.span>
 
-            {/* space */}
-            <motion.span style={{ width: "0.5ch" }} />
+        {/* A appears between S and I only in full stage */}
+        {stage === "full" && <AnimatedLetter letter="A" delay={0.1} />}
 
-            {/* DHANUSH */}
-            <motion.span layout>D</motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              layout
-            >
-              HANUSH
-            </motion.span>
+        {/* I */}
+        <motion.span
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          layout
+        >
+          I
+        </motion.span>
 
-            {/* space */}
-            <motion.span style={{ width: "0.5ch" }} />
+        {/* space appears *only* in full stage */}
+        {stage === "full" && <motion.span style={{ width: "0.5ch" }} layout />}
 
-            {/* SOMA */}
-            <motion.span
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              layout
-            >
-              SOMA
-            </motion.span>
-          </>
-        )}
+        {/* D */}
+        <motion.span
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          layout
+        >
+          D
+        </motion.span>
+
+        {/* HANUSH appears after D in full stage */}
+        {stage === "full" &&
+          ["H", "A", "N", "U", "S", "H"].map((ch, i) => (
+            <AnimatedLetter key={`h-${i}`} letter={ch} delay={0.5 + i * 0.1} />
+          ))}
+
+        {/* space after HANUSH */}
+        {stage === "full" && <motion.span style={{ width: "0.5ch" }} layout />}
+
+        {/* SOMA appears at end */}
+        {stage === "full" &&
+          ["S", "O", "M", "A"].map((ch, i) => (
+            <AnimatedLetter key={`soma-${i}`} letter={ch} delay={1.2 + i * 0.1} />
+          ))}
       </motion.div>
     </div>
   );
 };
 
 export default IntroAnimation;
+
