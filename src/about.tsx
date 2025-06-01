@@ -6,14 +6,22 @@ import hotjar from "./assets/about/hotjar.png";
 import spline from "./assets/about/spline.png";
 import invision from "./assets/about/invision.png";
 import langchain from "./assets/about/langchain.png";
+import openai from "./assets/about/openai.jpg";
+import twilio from "./assets/about/twilio.png";
+import seaborn from "./assets/about/seaborn.png";
 // import langgraph from "./assets/about/langgraph.png";
 
 export default function AboutMePage() {
   const techStacks = {
     "AI / ML": [
+      { name: 'Numpy', src: 'https://img.icons8.com/?size=100&id=aR9CXyMagKIS&format=png&color=000000'},
+      { name: 'Pandas', src: 'https://img.icons8.com/?size=100&id=xSkewUSqtErH&format=png&color=000000'},
+      { name: 'Scikit Learn', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg' },
+      { name: 'Seaborn', src: seaborn},
+      { name: 'Matplotlib', src:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg'},
       { name: 'TensorFlow', src: 'https://img.icons8.com/?size=100&id=n3QRpDA7KZ7P&format=png&color=000000' },
       { name: 'PyTorch', src: 'https://img.icons8.com/?size=100&id=jH4BpkMnRrU5&format=png&color=000000' },
-      { name: 'Scikit Learn', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg' },
+      { name: 'OpenAI API', src: openai},
       { name: 'LangChain', src: langchain},
       { name: 'Jupyter NoteBook', src: 'https://img.icons8.com/?size=100&id=J0SgMWzAxqFj&format=png&color=000000' },
       { name: 'Power BI', src: 'https://img.icons8.com/?size=100&id=3sGOUDo9nJ4k&format=png&color=000000' },
@@ -59,6 +67,8 @@ export default function AboutMePage() {
       { name: 'Visual Studio Code', src: 'https://img.icons8.com/?size=100&id=0OQR1FYCuA9f&format=png&color=000000'},
       { name: 'Prometheus', src: 'https://img.icons8.com/?size=100&id=Ei4ZhVQvIMHE&format=png&color=000000'},
       { name: 'Grafana', src: 'https://img.icons8.com/?size=100&id=6WbypxLnLs37&format=png&color=000000'},
+      // { name: 'OpenAI API', src: openai},
+      { name: 'Twilio API', src: twilio}
     ]
  
   };

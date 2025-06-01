@@ -240,6 +240,27 @@ function App() {
       </section>
       <Chatbot />
       
+       {/* <div className="w-[960px] mx-auto my-5 p-4 shadow-[0_5px_5px_5px_#CCCCCC] bg-white">
+      <header className="py-[35px] text-center bg-white">
+        <h1 className="leading-[45px]">
+          <a
+            href="/"
+            className="text-[#799AC0] text-[40px] font-normal uppercase tracking-[-2px] no-underline hover:text-[#799AC0]"
+          >
+            SMART-NEST
+          </a>
+          <br />
+          <span className="text-[#DE2D3A] text-[40px] font-normal uppercase tracking-[-2px]">
+            SOLUTIONS
+          </span>
+        </h1>
+        <h2 className="text-[#A6A9AD] text-[13px] relative -top-[5px]">
+          For your Smart Home
+        </h2>
+
+      </header>
+    </div> */}
+
     </div>
     )}
     </>
