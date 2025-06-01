@@ -458,7 +458,7 @@ export default function Contact() {
           </a>{" "}
           Sai Dhanush Soma
         </p>
-        <h5>Version 1.1</h5>
+        <h5>Version 1.6</h5>
       </footer>
     </section>
   );

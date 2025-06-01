@@ -593,7 +593,7 @@ function Work() {
 
               <div className="mt-2 flex items-center gap-4 flex-wrap text-sm max-sm:mt-4">
                 <span className="bg-gradient-to-r from-black to-white text-white py-1 px-3 rounded-full font-medium shadow-md max-sm:mt-[-10px] max-sm:px-2">
-                  UI Designs
+                  UI Designs with Figma dor Healthcare Management System
                 </span>
                 <span className="text-gray-500 max-sm:text-[14px] max-sm:mt-[-4px] font-lora">
                   Built in April 2025
@@ -634,12 +634,13 @@ function Work() {
               {/* Info Left */}
               <div className="md:w-1/2 hover:text-gray-500">
                 <p className="text-gray-500 mb-4 max-sm:text-[13px] lg:text-[15px] font-lora">
-                  UI Designs with Figma
+                  A smart healthcare system for elderly users (age:65+)integrating wearable technology and mobile applications to enhance elderly well-being through real-time monitoring, AI-driven recommendations, and emergency response mechanisms.
                 </p>
                 <ul className="text-sm text-gray-500  list-disc list-inside max-sm:text-[12px] font-winky">
-                  <li>Built with React + Devvit SDK</li>
-                  <li>Hosted on Reddit as a native app</li>
-                  <li>Game state managed using subreddit posts</li>
+                  <li>Real-time health tracking using a wearable with sensors for vitals like heart rate, SpO₂, and motion detection.</li>
+                  <li>Emergency alert system that notifies caregivers or services on detecting falls or anomalies.</li>
+                  <li>AI-powered health recommendations adapting to user behavior and health patterns.</li>
+                  <li>Intuitive mobile app with large fonts, voice commands, and high-contrast UI for elderly users.</li>
                   {/* Tools Section */}
                   {open === 2 && (
                     <div className="max-sm:mt-8 md:mt-2 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 ">
