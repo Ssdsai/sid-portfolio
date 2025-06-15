@@ -48,7 +48,7 @@ function App() {
       {!showAnimation && (
     <div className="App overflow-x-hidden " ref={containerRef} data-scroll-container>
        <Home />
-      <Landing />
+      <div className="sm:mt-16 md:mt-0 lg:mt-0"><Landing /></div>
       
       {/* <section data-scroll-section id="about" className="">
       <h3 className="mt-[-60vh] lg:mt-[-20vh] text-black font-brush text-[30px]" >
@@ -204,7 +204,7 @@ function App() {
             Chapter 3
             <h1 className="font-autumn text-[80px] mt-[-15px]">Education & Experience</h1>
             {/* Education Video (Left Side) */}
-          <div className="absolute left-6 mt-[-400px] hidden sm:block z-10 lg:w-[25%] md:w-[30%] md:mt-[-370px] aspect-square rounded-full overflow-hidden">
+          <div className="absolute left-6 mt-[-400px] hidden md:block z-10 lg:w-[25%] md:w-[30%] md:mt-[-370px] aspect-square rounded-full overflow-hidden">
             <video
               className="w-full h-full object-cover"
               src={education}
@@ -216,7 +216,7 @@ function App() {
           </div>
 
           {/* Experience Video (Right Side) */}
-          <div className="absolute right-6 mt-[-60px] hidden sm:block z-10 lg:w-[25%] md:w-[30%] md:mt-[-30px] aspect-square rounded-full overflow-hidden">
+          <div className="absolute right-6 mt-[-60px] hidden md:block z-10 lg:w-[25%] md:w-[30%] md:mt-[-30px] aspect-square rounded-full overflow-hidden">
             <video
               className="w-full h-full object-cover"
               src={experience}

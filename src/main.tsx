@@ -132,7 +132,7 @@ export default function Home() {
               href="home"
               className="border border-transparent  rounded-lg px-6 py-2"
             >
-              Sid's Portfolio
+              Portfolio
             </a>
           </div>
 
@@ -200,6 +200,17 @@ export default function Home() {
                 <img
                   src="https://img.icons8.com/?size=100&id=LoL4bFzqmAa0&format=png&color=000000"
                   alt="GitHub"
+                  className="w-10 h-10 rounded-[35px] hover:scale-125 transition-transform"
+                />
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1g6oDIuS4T98qFm8IUpFf74wiQUg81NWU/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=pRezTnlZ3Oab&format=png&color=000000"
+                  alt="Email"
                   className="w-10 h-10 rounded-[35px] hover:scale-125 transition-transform"
                 />
               </a>

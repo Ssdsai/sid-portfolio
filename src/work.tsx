@@ -593,7 +593,7 @@ function Work() {
 
               <div className="mt-2 flex items-center gap-4 flex-wrap text-sm max-sm:mt-4">
                 <span className="bg-gradient-to-r from-black to-white text-white py-1 px-3 rounded-full font-medium shadow-md max-sm:mt-[-10px] max-sm:px-2">
-                  UI Designs with Figma dor Healthcare Management System
+                  UI Designs with Figma
                 </span>
                 <span className="text-gray-500 max-sm:text-[14px] max-sm:mt-[-4px] font-lora">
                   Built in April 2025
@@ -729,7 +729,7 @@ function Work() {
                 </span>
               </div>
 
-              <p className="mt-1 text-gray-500 text-[30px] max-sm:text-[13px] md:text-base font-lora leading-snug md:leading-normal lg:leading-relaxed">
+              <p className="mt-1 text-gray-500 text-[30px] text-sm max-sm:text-[13px] md:text-base font-lora leading-snug md:leading-normal lg:leading-relaxed">
                 Food Ordering Website with AI Assistance
               </p>
 
@@ -911,7 +911,7 @@ function Work() {
                 </span>
               </div>
 
-              <p className="mt-1 text-gray-500 text-[30px] max-sm:text-[13px] md:text-base font-lora leading-snug md:leading-normal lg:leading-relaxed">
+              <p className="mt-1 text-gray-500 text-[30px] text-sm max-sm:text-[13px] md:text-base font-lora leading-snug md:leading-normal lg:leading-relaxed">
                 IOT MarketPlace Website with AI Assistance
               </p>
 
@@ -1088,7 +1088,7 @@ function Work() {
                 </span>
               </div>
 
-              <p className="mt-1 text-gray-500 text-[30px] max-sm:text-[13px] md:text-base font-lora leading-snug md:leading-normal lg:leading-relaxed">
+              <p className="mt-1 text-gray-500 text-sm text-[30px] max-sm:text-[13px] md:text-base font-lora leading-snug md:leading-normal lg:leading-relaxed">
                 Machine learning-based approach using neural networks to accurately detect credit card fraud in transactional data.
               </p>
 
@@ -1266,7 +1266,7 @@ function Work() {
                 </span>
               </div>
 
-              <p className="mt-1 text-gray-500 text-[30px] max-sm:text-[13px] md:text-base font-lora leading-snug md:leading-normal lg:leading-relaxed">
+              <p className="mt-1 text-gray-500 text-[30px] text-sm max-sm:text-[13px] md:text-base font-lora leading-snug md:leading-normal lg:leading-relaxed">
                 Fitness Services and Gym Website with Capgemini.
               </p>
 

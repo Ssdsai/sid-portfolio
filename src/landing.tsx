@@ -84,7 +84,7 @@ export default function Home() {
                 efficient, maintainable code and integrating AI-driven solutions.
               </p>
               <a
-                href="https://drive.google.com/file/d/1eBBFiSKcePMEkhv6qiqRXKvMDnDUBw8L/view?usp=sharing"
+                href="https://drive.google.com/file/d/1g6oDIuS4T98qFm8IUpFf74wiQUg81NWU/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative inline-block mt-6 w-fit border border-black rounded-lg px-6 py-2 font-playfair text-sm sm:text-base md:text-lg text-black overflow-hidden group transition-all duration-200"

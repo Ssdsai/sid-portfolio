@@ -29,3 +29,39 @@
     "api"
   ]
 }
+
+
+
+// {
+//   "compilerOptions": {
+//     "target": "ES2022",
+//     "lib": [
+//       "dom",
+//       "dom.iterable",
+//       "esnext"
+//     ],
+//     "allowJs": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "module": "ES2022",
+//     "moduleResolution": "Node",
+//     "esModuleInterop": true,
+//     "moduleDetection": "force",
+//     "allowSyntheticDefaultImports": true,
+//     "resolveJsonModule": true,
+//     "skipLibCheck": true,
+//     "strict": true,
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "jsx": "react-jsx",
+//     "types": ["node",
+//               "@vercel/node",
+//               "three"],
+//     // "typeRoots": ["./node_modules/@types", "./src/types"] 
+//   },
+//   "include": [
+//     "src",
+//     "api",
+//     "vite-env.d.ts"
+//   ]
+// }

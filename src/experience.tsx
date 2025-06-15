@@ -106,7 +106,7 @@ const Experience = ({ refProp }: ExperienceProps) => {
       <div className="flex-1">
         <h1 className="text-2xl font-ancizar text-gray-800">Illinois Institute of Technology, Chicago, USA</h1>
         <p className="text-gray-700 font-lora text-md">Master's in Computer Science</p>
-        <p className="text-gray-500 text-sm mt-1 font-lora">GPA: 3.2/4.0 </p>
+        <p className="text-gray-500 text-sm mt-1 font-lora"> </p> {/* GPA: 3.2/4.0 */}
         <p className="text-gray-500 text-sm font-lora">2023 - 2025</p>
         <p className="text-gray-800 mt-2 text-sm font-lora">
           Relevant Courses: Enterprise Web Applications, Machine Learning, Data Privacy & Security, Software Engineering and Computer Networks
@@ -129,7 +129,7 @@ const Experience = ({ refProp }: ExperienceProps) => {
       <div className="flex-1">
         <h1 className="text-2xl font-ancizar text-gray-800">Presidency University, Bengaluru, India</h1>
         <p className="text-gray-700 font-lora text-md">Bachelors of Engineering in Computer Science</p>
-        <p className="text-gray-500 text-sm mt-1 font-lora">GPA: 8.49/10</p>
+        <p className="text-gray-500 text-sm mt-1 font-lora"></p> {/* GPA: 8.49/10 */}
         <p className="text-gray-500 text-sm font-lora">2019 - 2023</p>
         <p className="text-gray-800 mt-2 text-sm font-lora">
           Key Courses: Data Structures and Algorithms, DBMS, Operating Systems, Mobile Application Development, Object Oriented Programming

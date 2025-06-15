@@ -234,7 +234,7 @@ export default function Contact() {
         <div className="flex flex-col justify-start items-start">
           <h2 className="text-4xl font-shadows text-[80px] text-gray-900 max-sm:text-[50px]">
             Get in Touch !
-           <span className="flex felx-row">
+           <span className="flex flex-row">
              <img
                 src="https://offloadmedia.feverup.com/secretchicago.com/wp-content/uploads/2021/01/19043815/Chicago-Bean-scaled.jpg"
                 alt="Chicago"
@@ -255,7 +255,7 @@ export default function Contact() {
           <div className="mt-20 space-y-4 max-sm:space-y-1 text-gray-700 font-winky text-[30px]">
             <p>
             <span className="inline-flex items-center gap-1">
-            <a href="mailto:stevesid161201@gmail.com"><img
+            <a href="mailto:saidhanushsoma@gmail.com"><img
                     src={emailicon}
                     alt="Email Gif"
                     className="
@@ -271,12 +271,12 @@ export default function Contact() {
               <strong>Email:</strong>
               <br />
               <a
-                href="mailto:stevesid161201@gmail.com"
+                href="mailto:saidhanushsoma@gmail.com"
                 className="text-sky-600 hover:underline inline-flex gap-1 max-sm:text-[20px]"
               >
                 
                  
-                  stevesid161201@gmail.com
+                  saidhanushsoma@gmail.com
                 
               </a>
               </span>
@@ -315,7 +315,7 @@ export default function Contact() {
             <p>
             <span className="inline-flex items-center gap-1">
             <a
-                href="https://drive.google.com/file/d/1eBBFiSKcePMEkhv6qiqRXKvMDnDUBw8L/view?usp=sharing"
+                href="https://drive.google.com/file/d/1g6oDIuS4T98qFm8IUpFf74wiQUg81NWU/view?usp=sharing"
                 className="text-sky-600 hover:underline inline-flex gap-1"
                 target="_blank"
               >
@@ -346,7 +346,7 @@ export default function Contact() {
         </div>
 
         {/* RIGHT SIDE: FORM */}
-        <form onSubmit={handleSubmit} className="space-y-6 w-full">
+        <form onSubmit={handleSubmit} className="space-y-6 w-full relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
@@ -432,6 +432,17 @@ export default function Contact() {
           />
         </a>
         <a
+          href="https://drive.google.com/file/d/1g6oDIuS4T98qFm8IUpFf74wiQUg81NWU/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/?size=100&id=pRezTnlZ3Oab&format=png&color=000000"
+            alt="Email"
+            className="w-10 h-10 rounded-[35px] hover:scale-110 transition-transform"
+          />
+        </a>
+        <a
           href="https://discord.com/channels/sid161201"
           target="_blank"
           rel="noopener noreferrer"
@@ -449,7 +460,7 @@ export default function Contact() {
         <p>
           &copy; 2025.{" "}
           <a
-            href="https://portfolio-ten-pi-50.vercel.app/"
+            href="https://saidhanush.xyz/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline"
