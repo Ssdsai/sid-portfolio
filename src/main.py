@@ -11,7 +11,8 @@ import json
 load_dotenv()
 
 # Load OpenAI API key from environment variables
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+################ Change this to client = OpenAI(api_key=os.getenv("OPENAI_API_KEY")) if wanted to make it work in Localhost
+client = OpenAI()
 
 # Define FastAPI app
 app = FastAPI()
