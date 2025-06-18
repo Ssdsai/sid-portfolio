@@ -12,7 +12,8 @@ load_dotenv()
 
 # Load OpenAI API key from environment variables
 ################ Change this to client = OpenAI(api_key=os.getenv("OPENAI_API_KEY")) if wanted to make it work in Localhost
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+#Breaking Change 1 - client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Define FastAPI app
 app = FastAPI()
@@ -53,7 +54,8 @@ async def chat(request: ChatRequest):
     user_input = request.messages[-1].content
 
     # Embed the user's query
-    response = client.embeddings.create(
+    #Breaking Change 2 - response = openai.Embedding.create(
+    response = openai.embeddings.create(
         model="text-embedding-3-small",
         input=user_input
     )
@@ -76,7 +78,8 @@ async def chat(request: ChatRequest):
     ]
 
     # Generate the response using GPT-4o
-    chat_response = openai.chat.completions.create(
+    #Breaking Change 3 - chat_response = openai.chatompletions.create(
+    chat_response = openai.ChatCompletion.create(
         model="gpt-4o-mini",
         messages=full_messages,
         max_tokens=500
