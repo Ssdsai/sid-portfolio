@@ -78,7 +78,7 @@ async def chat(request: ChatRequest):
     ]
 
     # Generate the response using GPT-4o
-    #Breaking Change 3 - chat_response = openai.chatompletions.create(
+    #Breaking Change 3 - chat_response = openai.chat.completions.create(
     chat_response = openai.ChatCompletion.create(
         model="gpt-4o-mini",
         messages=full_messages,
