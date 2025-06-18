@@ -200,7 +200,8 @@ export default function Chatbot() {
     }
 
     try {
-      const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000";
+      //Breaking Change - 1 - const backendURL = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000";
+      const backendURL = process.env.REACT_APP_BACKEND_URL || "https://sid-portfolio.onrender.com";
       const response = await fetch(`${backendURL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
