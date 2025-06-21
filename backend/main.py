@@ -123,7 +123,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*","http://localhost:3000", 
-        "https://saidhanush.xyz",
+        "https://www.saidhanush.xyz",
         "https://sid-portfolio-rho.vercel.app"],  # React app
     allow_credentials=True,
     allow_methods=["*"],
