@@ -1,69 +1,233 @@
 {
-  "name": "Sai Dhanush Soma",
+  "name": "SAI DHANUSH SOMA",
   "location": "Chicago, IL",
-  "contact": {
-    "phone": "773-970-6599",
-    "email": "stevesid161201@gmail.com",
+  "phone": "773-970-6599",
+  "email": "saidhanushsoma@gmail.com",
+  "links": {
     "linkedin": "https://www.linkedin.com/in/ssdhanush/",
     "github": "https://github.com/Ssdsai",
-    "portfolio": "https://www.saidhanush.xyz/"
+    "portfolio": "https://www.saidhanush.xyz"
   },
   "summary": "Aspiring Software Engineer with 1.5 years of software development experience, skilled in building scalable solutions and optimizing performance. Passionate about problem-solving, agile methodologies, scalability and system design. Seeking to leverage software development expertise to deliver impactful solutions.",
   "skills": {
-    "languages_and_frameworks": [
-      "Python", "Core Java", "Java Servlets", "Langchain", "Flask", "SQL", "NoSQL",
-      "Spring Boot", "Hibernate", "JDBC", "Maven", "Apache Tomcat", "REST",
-      "HTML", "CSS", "Tailwind CSS", "ReactJS", "TypeScript", "ExpressJS", "NodeJS",
-      "Data Structures and Algorithms"
+    "languages_frameworks": [
+      "Python", "Core Java", "Java Servlets", "Javascript", "Langchain", "Flask", "SQL", "NoSQL",
+      "Spring Boot", "Hibernate", "JDBC", "Maven", "Apache Tomcat", "REST", "HTML5", "CSS3", 
+      "Tailwind CSS", "Bootstrap", "Material UI", "ReactJS", "Wireframing", "Prototyping", 
+      "User Research", "TypeScript", "ExpressJS", "NodeJS", "Elastic Search", "Data Structures and Algorithms"
     ],
     "tools": [
-      "Eclipse", "VS Code", "MySQL", "PostgreSQL", "MongoDB", "Docker", "Git",
-      "Jenkins", "Junit", "Jira", "Prometheus", "Grafana", "OpenAI API", "Twilio API",
-      "Microsoft Word", "Excel", "Access", "Outlook"
+      "Eclipse", "VS Code", "IntelliJ", "MySQL", "PostgreSQL", "MongoDB", "Docker", "Git", "Figma", 
+      "HotJar", "Spline", "Photoshop", "AdobeXD", "Sketch", "After Effects", "Jenkins", "Junit", "Jira", 
+      "Selenium", "Prometheus", "Grafana", "OpenAI API", "Twilio API", "FastAPI", "CoinGecko API", 
+      "Tenor API", "PowerBI", "Tableau", "Numpy", "Pandas", "Tensorflow", "PyTorch", "NTLK", "Keras", 
+      "Seaborn", "Matplotlib", "scikit-learn", "Microsoft Office Suite", "CI/CD Pipelines", "Render"
     ]
   },
-  "work_experience": [
+  
+"skills_categorized": {
+    "AI/ML": [
+      "OpenAI API",
+      "Langchain",
+      "Tensorflow",
+      "PyTorch",
+      "Keras",
+      "scikit-learn",
+      "Numpy",
+      "Pandas",
+      "Seaborn",
+      "Matplotlib",
+      "NTLK",
+      "Prometheus",
+      "Grafana",
+      "PowerBI",
+      "Tableau"
+    ],
+    "Frontend": [
+      "ReactJS",
+      "TypeScript",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Material UI",
+      "Wireframing",
+      "Prototyping",
+      "User Research",
+      "Figma",
+      "HotJar",
+      "Spline",
+      "Photoshop",
+      "AdobeXD",
+      "Sketch",
+      "After Effects"
+    ],
+    "Backend": [
+      "Python",
+      "Core Java",
+      "Java Servlets",
+      "Flask",
+      "Spring Boot",
+      "Hibernate",
+      "JDBC",
+      "ExpressJS",
+      "NodeJS",
+      "REST",
+      "FastAPI",
+      "Elastic Search",
+      "Maven",
+      "Apache Tomcat",
+      "MongoDB",
+      "MySQL",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "CI/CD Pipelines",
+      "Jenkins",
+      "Junit"
+    ],
+    "Full Stack": [
+      "MERN Stack (MongoDB, ExpressJS, ReactJS, NodeJS)",
+      "Langchain",
+      "Flask",
+      "Java Servlets",
+      "Python",
+      "ReactJS",
+      "Tailwind CSS",
+      "TypeScript",
+      "CI/CD Pipelines",
+      "Docker"
+    ],
+    "Software Developer/Engineer": [
+      "Core Java",
+      "Python",
+      "Java Servlets",
+      "Spring Boot",
+      "Hibernate",
+      "REST",
+      "Data Structures and Algorithms",
+      "Git",
+      "Docker",
+      "CI/CD Pipelines",
+      "Jira",
+      "Selenium",
+      "Junit",
+      "Maven",
+      "Apache Tomcat"
+    ],
+    "UI/UX": [
+      "Figma",
+      "Sketch",
+      "AdobeXD",
+      "Photoshop",
+      "HotJar",
+      "Spline",
+      "Wireframing",
+      "Prototyping",
+      "User Research",
+      "Material UI",
+      "Tailwind CSS"
+    ]
+  },
+  "experience": [
     {
       "title": "Software Developer",
       "company": "Capgemini",
       "location": "Bengaluru, India",
-      "duration": "January 2023 - June 2023",
-      "details": [
-        "Developed a full-stack fitness and gym platform using the MERN stack with Twilio OTP authentication.",
-        "Implemented real-time gym booking system and workout recommendation engine.",
-        "Built and optimized RESTful APIs and improved UI/UX using React.js and Tailwind CSS.",
-        "Followed Agile methodologies, code reviews, and team collaboration.",
-        "Project assessed by Capgemini professionals as part of final year project."
+      "date": "January 2023 - June 2023",
+      "description": [
+        "Built full-stack fitness and gym platform using MERN stack with OTP-based authentication using Twilio.",
+        "Created real-time booking system with MongoDB Atlas and interactive recommendation engine.",
+        "Designed and optimized REST APIs, enhanced UI/UX using React.js and Tailwind CSS.",
+        "Followed Agile practices and collaborated with developers and designers.",
+        "Capgemini-assessed final year project with formal evaluation."
       ]
     },
     {
       "title": "Research Intern",
       "company": "La Trobe University",
-      "location": "Melbourne, Australia - Remote",
-      "duration": "July 2021 - June 2022",
-      "details": [
-        "Built a Dashboard with Prometheus and Grafana using Python.",
-        "Worked on blockchain and IoT consensus mechanism with 95% uptime and 20% efficiency boost."
+      "location": "Melbourne, Australia (Remote)",
+      "date": "July 2021 - June 2022",
+      "description": [
+        "Built dashboard using Prometheus and Grafana with Python.",
+        "Worked on blockchain and IoT efficiency with 95% uptime and 20% boost."
       ]
     }
   ],
   "projects": [
     {
       "name": "SmartNest",
-      "duration": "August 2024 - December 2024",
-      "details": [
-        "Built a Smart Home management app with ReactJS frontend and Java Servlets backend.",
-        "Implemented AI agents using LangChain and GPT-4o-mini.",
-        "Used MySQL, MongoDB, Docker, Elasticsearch, and RAG-based search for backend.",
-        "Designed multi-role auth system and integrated Message Queues."
+      "tech_stack": ["ReactJS", "Java", "Python", "Flask", "MySQL", "MongoDB", "OpenAI API"],
+      "date": "August 2024 - December 2024",
+      "description": [
+        "Built smart home product management app using Java Servlets for backend and ReactJS frontend.",
+        "Integrated AI recommendations with LangChain + GPT-4o-mini.",
+        "Used MySQL, MongoDB, Docker, Elasticsearch, RAG-based search and semantic embeddings.",
+        "Role-based authentication and message queue integration."
+      ],
+      "links": [
+        "https://github.com/Ssdsai/Smart-Nest"
       ]
     },
     {
       "name": "Cuisine Connect",
-      "duration": "September 2024 - December 2024",
-      "details": [
-        "Built AI chatbot for food ordering with ReactJS frontend and Flask backend.",
-        "Integrated OpenAI and LangChain agents for refund handling and fraud detection."
+      "tech_stack": ["ReactJS", "Python", "Flask", "MongoDB", "OpenAI API", "LangChain"],
+      "date": "September 2024 - December 2024",
+      "description": [
+        "Built AI chatbot to streamline food ordering and provide recommendations.",
+        "Used OpenAI + LangChain agents for refund, defect, and fraud handling."
+      ],
+      "links": [
+        "https://github.com/Ssdsai/Cuisine-Connect"
+      ]
+    },
+    {
+      "name": "GIF ENIGMA",
+      "tech_stack": ["Devvit", "React.js", "TypeScript", "Redis", "Tenor API", "Gemini-2.5"],
+      "date": "April 2025 - May 2025",
+      "description": [
+        "Interactive GIF-based guessing game with 100+ puzzles and score tracking.",
+        "Creator Mode and Reddit sharing enabled through Gemini AI."
+      ],
+      "links": [
+        "https://www.reddit.com/r/PlayGIFEnigma/"
+      ]
+    },
+    {
+      "name": "Fit Pulse",
+      "tech_stack": ["React.js", "ExpressJS", "NodeJS", "MongoDB", "Twilio API"],
+      "date": "Jan 2023 - June 2023",
+      "description": [
+        "MERN-stack gym booking site with OTP login and real-time reservations.",
+        "Spatial indexing in MongoDB enabled geo-discovery with 100 km range."
+      ],
+      "links": [
+        "https://github.com/Ssdsai/Fit-Pulse"
+      ]
+    },
+    {
+      "name": "My Well",
+      "tech_stack": ["Figma", "Sketch"],
+      "date": "September 2023 - December 2023",
+      "description": [
+        "Designed UI for React Native app integrating health wearables for seniors.",
+        "Backend with Node.js, MongoDB, Redis, AWS and AI health analytics."
+      ],
+      "links": [
+        "https://www.figma.com/design/TMNKwJ7eSgiWvu7GbGJvqu/MY-WELL--Copy---Community-?node-id=2001-2"
+      ]
+    },
+    {
+      "name": "Portfolio",
+      "tech_stack": ["React.js", "TypeScript", "TailwindCSS", "Python", "LangChain", "OpenAI", "Render"],
+      "date": "April 2025 - June 2025",
+      "description": [
+        "Full-stack serverless portfolio with resume-driven chatbot Q&A using LangChain + OpenAI.",
+        "CI/CD pipeline deployment via Vercel and Render with semantic embedding search."
+      ],
+      "links": [
+        "https://saidhanush.xyz/"
       ]
     }
   ],
@@ -71,14 +235,23 @@
     {
       "institution": "Illinois Institute of Technology",
       "location": "Chicago, IL",
-      "duration": "August 2023 - May 2025",
-      "degree": "Master's in Computer Science"
+      "degree": "Master's in Computer Science",
+      "date": "August 2023 - May 2025",
+      "gpa": "3.2/4.0"
     },
     {
       "institution": "Presidency University",
-      "location": "Bengaluru, Karnataka, India",
-      "duration": "August 2019 - June 2023",
-      "degree": "Bachelor of Engineering in Computer Science"
+      "location": "Bengaluru, India",
+      "degree": "Bachelor of Engineering in Computer Science",
+      "date": "August 2019 - June 2023",
+      "gpa": "3.68/4.0"
     }
+  ],
+  "certifications": [
+    "AWS Cloud Practitioner Essentials | AWS Training and Certification | Future Skills Prime",
+    "Introduction to Cybersecurity | Cisco Networking Academy | Future Skills Prime",
+    "Machine Learning in Linear Regression | Analytica LEAPS | Future Skills Prime",
+    "Web Technologies | Presidency University",
+    "Java Spring Framework 6 | Udemy - Telusko"
   ]
 }

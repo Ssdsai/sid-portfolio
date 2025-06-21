@@ -1,0 +1,203 @@
+// Top of your component
+const [currentSmartNest, setCurrentSmartNest] = useState(0);
+const [isZoomed, setIsZoomed] = useState(false);
+const [zoomImage, setZoomImage] = useState("");
+
+
+
+{/* ----------- Project 4 ----------- */}
+<div
+  ref={(el) => {
+    projectRefs.current[4] = el;
+  }}
+  onClick={(e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    toggle(4);
+  }}
+  className="group block border-b border-gray-700 py-3 px-6 width-[150%] transition duration-300 bg-white hover:bg-gray-800 bg-opacity-100 cursor-pointer rounded-xl"
+>
+  <div className="flex items-center gap-6">
+    <img
+      src={sn}
+      alt="Smart Nest Logo"
+      className="w-20 h-30 object-cover rounded-md max-sm:mt-4 lg:w-22 lg:h-12"
+    />
+    <div className="flex-1">
+      <div className="flex justify-between">
+        <h3 className="text-2xl md:text-3xl max-sm:text-md max-sm:left-10 max-sm:absolute font-abel text-black group-hover:text-[#FFFFFF] group-hover:translate-x-2 transform transition duration-300">
+          Smart Nest
+        </h3>
+        <span className="text-gray-500 group-hover:text-gray-700 transition duration-300 max-sm:ml-16">
+          {open === 4 ? "−" : "→"}
+        </span>
+      </div>
+
+      <div className="mt-2 flex items-center gap-4 flex-wrap text-sm max-sm:mt-4">
+        <span className="bg-gradient-to-r from-[#DE2D3A] to-[#799AC0] text-white py-1 px-3 rounded-full font-medium shadow-md max-sm:mt-[-7px] max-sm:px-2">
+          Full Stack Web App
+        </span>
+        <span className="text-gray-500 max-sm:text-[14px] max-sm:mt-[-5px] text-[15px] font-lora">
+          Built Aug 2024 - Dec 2024
+        </span>
+      </div>
+
+      <p className="mt-1 text-gray-500 text-[30px] text-sm max-sm:text-[13px] md:text-base font-lora leading-snug md:leading-normal lg:leading-relaxed">
+        IOT MarketPlace Website with AI Assistance
+      </p>
+
+      {/* Buttons */}
+      <div className="mt-4 flex gap-4" onClick={(e) => e.stopPropagation()}>
+        <a
+          onClick={(e) => e.stopPropagation()}
+          href="https://github.com/Ssdsai/Smart-Nest"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 text-sm font-medium text-gray-500 hover:text-gray-600 transition"
+        >
+          <img
+            src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000"
+            alt="GitHub"
+            className="w-8 h-8 rounded-[5px] hover:scale-105 transition-transform"
+          />
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* Accordion Content */}
+  {open === 4 && (
+    <div className="mt-6 md:flex md:gap-6">
+      {/* Info Left */}
+      <div className="md:w-1/2 hover:text-gray-500 font-lora">
+        <p className="text-gray-500 mb-4">
+          An IoT-based marketplace website for smart home products, featuring multi-level user access, seamless order management, intelligent review analysis, and AI-powered product recommendations for a personalized shopping experience.
+        </p>
+        <ul className="text-sm text-gray-500 list-disc list-inside font-winky">
+          <li>Frontend built using ReactJS and styled with CSS3.</li>
+          <li>Backend developed with Java Servlets and deployed on Apache Tomcat.</li>
+          <li>MySQL used for user data and transactions; MongoDB for storing product reviews.</li>
+          <li>OpenAI embeddings + Elasticsearch for semantic review search and product recommendations.</li>
+          <li>AI-generated product data and reviews using LangChain and OpenAI APIs.</li>
+          <li>Flask + Docker used for image recognition and microservice-based recommendations.</li>
+        </ul>
+      </div>
+
+      {/* Media Right - Responsive Image Slider */}
+      <div className="md:w-1/2 mt-4 md:mt-0">
+        <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg overflow-hidden shadow-md">
+          {smartnestImages.map((img, index) => (
+            <div key={index}>
+              <img
+                src={img}
+                alt={`Smart Nest ${index}`}
+                onClick={() => {
+                  setZoomImage(img);
+                  setIsZoomed(true);
+                }}
+                className={`absolute top-0 left-0 w-full h-full object-cover cursor-zoom-in transition-opacity duration-700 ${
+                  index === currentSmartNest ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              />
+              {index === currentSmartNest && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setZoomImage(img);
+                    setIsZoomed(true);
+                  }}
+                  className="absolute bottom-3 right-3 bg-black text-white text-xs px-3 py-1 rounded-full opacity-70 hover:opacity-100 z-30"
+                >
+                  🔍 Zoom
+                </button>
+              )}
+            </div>
+          ))}
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setCurrentSmartNest((prev) =>
+                prev === 0 ? smartnestImages.length - 1 : prev - 1
+              );
+            }}
+            className="absolute top-1/2 left-3 -translate-y-1/2 bg-white bg-opacity-80 text-black px-2 py-1 rounded-full shadow z-20 hover:bg-opacity-100"
+          >
+            ←
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setCurrentSmartNest((prev) =>
+                prev === smartnestImages.length - 1 ? 0 : prev + 1
+              );
+            }}
+            className="absolute top-1/2 right-3 -translate-y-1/2 bg-white bg-opacity-80 text-black px-2 py-1 rounded-full shadow z-20 hover:bg-opacity-100"
+          >
+            →
+          </button>
+        </div>
+
+        {/* Dots */}
+        <div className="flex justify-center gap-1 mt-2">
+          {smartnestImages.map((_, idx) => (
+            <div
+              key={idx}
+              className={`w-2 h-2 rounded-full ${
+                idx === currentSmartNest ? "bg-blue-600" : "bg-gray-300"
+              }`}
+            ></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  {/* Tools Section */}
+  {open === 4 && (
+    <div className="mx-auto w-full max-w-[1280px] px-4 lg:px-0 mt-4">
+      <div className="flex flex-col max-sm:flex-row max-sm:flex-wrap sm:flex-row md:flex-wrap lg:flex-row lg:flex-wrap xl:flex-row xl:flex-wrap justify-center gap-4 items-center">
+        {smartnest_tools.map((tool, index) => (
+          <div
+            key={index}
+            className="text-center flex flex-col items-center justify-center w-20 sm:w-24 md:w-28 lg:w-28 xl:w-28"
+          >
+            <img
+              src={tool.src}
+              alt={tool.name}
+              className="w-14 h-14 max-sm:w-8 max-sm:h-8 mx-auto mb-1 object-cover"
+            />
+            <p className="text-sm max-sm:text-[12px] font-winky text-gray-500 leading-tight">
+              {tool.name}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+</div>
+
+{/* Fullscreen Zoom Modal */}
+{isZoomed && (
+  <div
+    className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center"
+    onClick={() => setIsZoomed(false)}
+  >
+    <img
+      src={zoomImage}
+      alt="Zoomed"
+      className="max-w-full max-h-[90vh] object-contain p-4"
+    />
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        setIsZoomed(false);
+      }}
+      className="absolute top-4 right-4 text-white text-2xl font-bold"
+    >
+      ✖
+    </button>
+  </div>
+)}

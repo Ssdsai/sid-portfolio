@@ -1,0 +1,84 @@
+{
+  "name": "Sai Dhanush Soma",
+  "location": "Chicago, IL",
+  "contact": {
+    "phone": "773-970-6599",
+    "email": "stevesid161201@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/ssdhanush/",
+    "github": "https://github.com/Ssdsai",
+    "portfolio": "https://www.saidhanush.xyz/"
+  },
+  "summary": "Aspiring Software Engineer with 1.5 years of software development experience, skilled in building scalable solutions and optimizing performance. Passionate about problem-solving, agile methodologies, scalability and system design. Seeking to leverage software development expertise to deliver impactful solutions.",
+  "skills": {
+    "languages_and_frameworks": [
+      "Python", "Core Java", "Java Servlets", "Langchain", "Flask", "SQL", "NoSQL",
+      "Spring Boot", "Hibernate", "JDBC", "Maven", "Apache Tomcat", "REST",
+      "HTML", "CSS", "Tailwind CSS", "ReactJS", "TypeScript", "ExpressJS", "NodeJS",
+      "Data Structures and Algorithms"
+    ],
+    "tools": [
+      "Eclipse", "VS Code", "MySQL", "PostgreSQL", "MongoDB", "Docker", "Git",
+      "Jenkins", "Junit", "Jira", "Prometheus", "Grafana", "OpenAI API", "Twilio API",
+      "Microsoft Word", "Excel", "Access", "Outlook"
+    ]
+  },
+  "work_experience": [
+    {
+      "title": "Software Developer",
+      "company": "Capgemini",
+      "location": "Bengaluru, India",
+      "duration": "January 2023 - June 2023",
+      "details": [
+        "Developed a full-stack fitness and gym platform using the MERN stack with Twilio OTP authentication.",
+        "Implemented real-time gym booking system and workout recommendation engine.",
+        "Built and optimized RESTful APIs and improved UI/UX using React.js and Tailwind CSS.",
+        "Followed Agile methodologies, code reviews, and team collaboration.",
+        "Project assessed by Capgemini professionals as part of final year project."
+      ]
+    },
+    {
+      "title": "Research Intern",
+      "company": "La Trobe University",
+      "location": "Melbourne, Australia - Remote",
+      "duration": "July 2021 - June 2022",
+      "details": [
+        "Built a Dashboard with Prometheus and Grafana using Python.",
+        "Worked on blockchain and IoT consensus mechanism with 95% uptime and 20% efficiency boost."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "SmartNest",
+      "duration": "August 2024 - December 2024",
+      "details": [
+        "Built a Smart Home management app with ReactJS frontend and Java Servlets backend.",
+        "Implemented AI agents using LangChain and GPT-4o-mini.",
+        "Used MySQL, MongoDB, Docker, Elasticsearch, and RAG-based search for backend.",
+        "Designed multi-role auth system and integrated Message Queues."
+      ]
+    },
+    {
+      "name": "Cuisine Connect",
+      "duration": "September 2024 - December 2024",
+      "details": [
+        "Built AI chatbot for food ordering with ReactJS frontend and Flask backend.",
+        "Integrated OpenAI and LangChain agents for refund handling and fraud detection."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Illinois Institute of Technology",
+      "location": "Chicago, IL",
+      "duration": "August 2023 - May 2025",
+      "degree": "Master's in Computer Science"
+    },
+    {
+      "institution": "Presidency University",
+      "location": "Bengaluru, Karnataka, India",
+      "duration": "August 2019 - June 2023",
+      "degree": "Bachelor of Engineering in Computer Science"
+    }
+  ]
+}
