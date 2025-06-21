@@ -38,7 +38,8 @@
     "react-type-animation": "^3.2.0",
     "three": "^0.175.0",
     "web-vitals": "^2.1.4",
-    "zod": "^3.25.62"
+    "zod": "^3.25.62",
+    "type": "module"
   },
   "scripts": {
     "start": "react-scripts start",
