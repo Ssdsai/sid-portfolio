@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: my-web-app
+    runtime: node
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: OPENAI_API_KEY
+        value: your-openai-key-here
+      - key: NODE_ENV
+        value: production
