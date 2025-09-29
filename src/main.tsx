@@ -204,7 +204,7 @@ export default function Home() {
                 />
               </a>
               <a
-                href="https://drive.google.com/file/d/1g6oDIuS4T98qFm8IUpFf74wiQUg81NWU/view?usp=sharing"
+                href="mailto:saidhanushsoma@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >

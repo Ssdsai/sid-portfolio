@@ -315,7 +315,7 @@ export default function Contact() {
             <p>
             <span className="inline-flex items-center gap-1">
             <a
-                href="https://drive.google.com/file/d/1g6oDIuS4T98qFm8IUpFf74wiQUg81NWU/view?usp=sharing"
+                href="https://drive.google.com/file/d/1-fWXLFoyc6VSkKNPavjd3UshXYIFiRSf/view?usp=sharing"
                 className="text-sky-600 hover:underline inline-flex gap-1"
                 target="_blank"
               >
@@ -432,7 +432,7 @@ export default function Contact() {
           />
         </a>
         <a
-          href="https://drive.google.com/file/d/1g6oDIuS4T98qFm8IUpFf74wiQUg81NWU/view?usp=sharing"
+          href="mailto:saidhanushsoma@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -120,7 +120,7 @@ export default function AboutMePage() {
                                                   {/* Software Developer • Full Stack Developer • AI/ML Enthusiast • UI/UX Designer */}
           </div>
           <p className="text-gray-500 text-sm leading-relaxed font-lora">
-          I'm Sai Dhanush Soma, a passionate Software Engineer with 1.5 years of hands-on development experience in building scalable, full-stack applications and optimizing system performance. With a strong foundation in data structures, algorithms, and system design, I thrive in fast-paced, agile environments and enjoy solving real-world problems through clean, efficient code.
+          I'm Sai Dhanush Soma, a passionate Software Engineer with hands-on development experience in building scalable, full-stack applications and optimizing system performance. With a strong foundation in data structures, algorithms, and system design, I thrive in fast-paced, agile environments and enjoy solving real-world problems through clean, efficient code.
 <br></br>
 My background spans research-driven blockchain monitoring systems and production-grade full-stack platforms using modern tech stacks like MERN, Java Servlets, LangChain, and Spring Boot. I bring a unique blend of backend efficiency, frontend finesse, Intiutive UI/UXand AI integration experience—most recently showcased in a smart home AI agent system using GPT-4, LangChain, and vector search with Elasticsearch.
 

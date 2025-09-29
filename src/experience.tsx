@@ -27,7 +27,7 @@ const experiences = [
     logo: latrobe,
     role: 'Research Intern',
     location: 'Remote',
-    duration: 'July 2022 – June 2023',
+    duration: 'July 2020 – June 2022',
     description: 'Integrated Python REST APIs on Raspberry Pi devices, providing real-time data collection and Prometheus for continuous monitoring of blockchain metrics, including transaction rates, storage usage, and network health. Built a centralized monitoring system with Grafana to visualize real-time statistics, network graphs, and key performance indicators, ensuring tracking of node performance with 95% uptime and real-time transaction throughput. Engineered a solution to visualize blockchain and consensus processes, refining node status, latency, and network performance, resulting in a 20% boost in efficiency. Executed Taiga Kanban for task management and milestones.',
     technologies: [
       { name: 'Prometheus', link: '' },
