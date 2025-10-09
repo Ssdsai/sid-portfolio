@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import cagpemini from "./assets/experience/capgemini-.png";
 import latrobe from "./assets/experience/latrobe.png";
+import awign from "./assets/experience/awign.png";
 import experience from "./assets/video/work.mp4"
 import { useInView } from "react-intersection-observer";
 
@@ -25,16 +26,35 @@ const experiences = [
   {
     company: 'La Trobe University, Melbourne, Australia',
     logo: latrobe,
-    role: 'Research Intern',
+    role: 'Research Engineer',
     location: 'Remote',
-    duration: 'July 2020 – June 2022',
-    description: 'Integrated Python REST APIs on Raspberry Pi devices, providing real-time data collection and Prometheus for continuous monitoring of blockchain metrics, including transaction rates, storage usage, and network health. Built a centralized monitoring system with Grafana to visualize real-time statistics, network graphs, and key performance indicators, ensuring tracking of node performance with 95% uptime and real-time transaction throughput. Engineered a solution to visualize blockchain and consensus processes, refining node status, latency, and network performance, resulting in a 20% boost in efficiency. Executed Taiga Kanban for task management and milestones.',
+    duration: 'July 2022 – June 2023',
+    description: 'Integrated Python REST APIs on Raspberry Pi devices for real-time IoT data acquisition and Prometheus-based blockchain monitoring, tracking transaction rates, storage usage, and node health with 95% uptime. Built Grafana dashboards and a centralized monitoring system to visualize network performance, consensus processes, and latency, improving efficiency by 20 % and enabling proactive issue detection. Developed IoT-driven blockchain analytics pipelines with AWS Cloud, SQL, and Python, employing Taiga Kanban for agile milestone tracking and continuous delivery of research outcomes.',
     technologies: [
       { name: 'Prometheus', link: '' },
       { name: 'Grafana', link: '' },
+      { name: 'Python', link: '' },
+      { name: 'SQL', link: '' },
+    ],
+  },
+  {
+    company: 'Awign',
+    logo: awign,
+    role: 'Web Developer',
+    location: 'Remote',
+    duration: 'Aug 2021 – Mar 2022',
+    description: 'Assisted in developing and maintaining responsive web development using ReactJS, JavaScript (ES6), HTML5, and CSS3, collaborating with senior developers to integrate RESTful APIs and display real-time data through React Hooks and basic state management, enhancing overall user experience and layout consistency. Gained exposure to backend development by creating simple CRUD APIs using Node.js and Express.js connected to a SQL database, while supporting debugging, version control, and task tracking through Git. ',
+    technologies: [
+      { name: 'ReactJS', link: '' },
+      { name: 'JavaScript', link: '' },
+      { name: 'HTML5', link: '' },
+      { name: 'CSS3', link: '' },
+      { name: 'SQL', link: '' },
+      { name: 'Git', link: '' },
     ],
   },
 ];
+//La Trobe - Integrated Python REST APIs on Raspberry Pi devices, providing real-time data collection and Prometheus for continuous monitoring of blockchain metrics, including transaction rates, storage usage, and network health. Built a centralized monitoring system with Grafana to visualize real-time statistics, network graphs, and key performance indicators, ensuring tracking of node performance with 95% uptime and real-time transaction throughput. Engineered a solution to visualize blockchain and consensus processes, refining node status, latency, and network performance, resulting in a 20% boost in efficiency. Executed Taiga Kanban for task management and milestones.
 
 type ExperienceProps = {
   refProp: React.Ref<HTMLElement | null>;
