@@ -28,7 +28,7 @@ const experiences = [
     logo: latrobe,
     role: 'Research Engineer',
     location: 'Remote',
-    duration: 'July 2022 – June 2023',
+    duration: 'July 2021 – June 2022',
     description: 'Integrated Python REST APIs on Raspberry Pi devices for real-time IoT data acquisition and Prometheus-based blockchain monitoring, tracking transaction rates, storage usage, and node health with 95% uptime. Built Grafana dashboards and a centralized monitoring system to visualize network performance, consensus processes, and latency, improving efficiency by 20 % and enabling proactive issue detection. Developed IoT-driven blockchain analytics pipelines with AWS Cloud, SQL, and Python, employing Taiga Kanban for agile milestone tracking and continuous delivery of research outcomes.',
     technologies: [
       { name: 'Prometheus', link: '' },
@@ -42,7 +42,7 @@ const experiences = [
     logo: awign,
     role: 'Web Developer',
     location: 'Remote',
-    duration: 'Aug 2021 – Mar 2022',
+    duration: 'Aug 2020 – Mar 2021',
     description: 'Assisted in developing and maintaining responsive web development using ReactJS, JavaScript (ES6), HTML5, and CSS3, collaborating with senior developers to integrate RESTful APIs and display real-time data through React Hooks and basic state management, enhancing overall user experience and layout consistency. Gained exposure to backend development by creating simple CRUD APIs using Node.js and Express.js connected to a SQL database, while supporting debugging, version control, and task tracking through Git. ',
     technologies: [
       { name: 'ReactJS', link: '' },

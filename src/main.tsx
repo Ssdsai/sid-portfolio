@@ -204,7 +204,7 @@ export default function Home() {
                 />
               </a>
               <a
-                href="mailto:saidhanushsoma@gmail.com"
+                href="mailto:stevesid161201@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >

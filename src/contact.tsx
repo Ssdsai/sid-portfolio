@@ -255,7 +255,7 @@ export default function Contact() {
           <div className="mt-20 space-y-4 max-sm:space-y-1 text-gray-700 font-winky text-[30px]">
             <p>
             <span className="inline-flex items-center gap-1">
-            <a href="mailto:saidhanushsoma@gmail.com"><img
+            <a href="mailto:stevesid161201@gmail.com"><img
                     src={emailicon}
                     alt="Email Gif"
                     className="
@@ -271,12 +271,12 @@ export default function Contact() {
               <strong>Email:</strong>
               <br />
               <a
-                href="mailto:saidhanushsoma@gmail.com"
+                href="mailto:stevesid161201@gmail.com"
                 className="text-sky-600 hover:underline inline-flex gap-1 max-sm:text-[20px]"
               >
                 
                  
-                  saidhanushsoma@gmail.com
+                  stevesid161201@gmail.com
                 
               </a>
               </span>
@@ -315,7 +315,7 @@ export default function Contact() {
             <p>
             <span className="inline-flex items-center gap-1">
             <a
-                href="https://drive.google.com/file/d/1NOpRjDe-oRLUV9-Bla7a7jX-uI6ivJqp/view?usp=sharing"
+                href="https://drive.google.com/file/d/1-Ch9LIEJpdjl0bxFou8Gnr7is8SXrYey/view?usp=sharing"
                 className="text-sky-600 hover:underline inline-flex gap-1"
                 target="_blank"
               >
@@ -432,7 +432,7 @@ export default function Contact() {
           />
         </a>
         <a
-          href="mailto:saidhanushsoma@gmail.com"
+          href="mailto:stevesid161201@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
